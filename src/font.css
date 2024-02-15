@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Hauora;
+  src: url("./assets/hauora_sans/fonts/web/Hauora-Medium.woff");
+  font-weight:normal;
+}
+@font-face {
+  font-family: Hauora;
+  src: url("./assets/hauora_sans/fonts/web/Hauora-Bold.woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Hauora;
+  src: url("./assets/hauora_sans/fonts/web/Hauora-ExtraBold.woff");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Hauora;
+  src: url("./assets/hauora_sans/fonts/web/Hauora-Light.woff");
+  font-weight: lighter;
+}
