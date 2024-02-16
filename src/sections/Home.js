@@ -9,6 +9,7 @@ import Logo from "../components/Logo";
 import Navbar from "../components/Navbar";
 import { useEffect } from "react";
 import {motion} from 'framer-motion'
+import {Header} from "./Nav";
 const Section = styled.section`
 position: relative;
 background-color: #181818;
@@ -25,7 +26,7 @@ const Home = () => {
     )()
   },[])
   return <Section>
-   <Navbar/>
+ <Header/>
     <HeaderVideo/>
   </Section>;
 };

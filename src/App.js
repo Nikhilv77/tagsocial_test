@@ -12,6 +12,9 @@ import './font.css'
 import FourthSection from './sections/FourthSection'
 import Loader from './components/Loader'
 import FifthSection from './sections/FifthSection'
+import SixthSection from './sections/SixthSection'
+import Footer from './sections/FooterSection'
+
 
 function App() {
   const [Loaded, setLoaded] = useState(false)
@@ -31,7 +34,9 @@ function App() {
           <SecondSection />
           <ThirdSection />
           <FourthSection />
+          <SixthSection/>
           <FifthSection />
+          <Footer/>
         </AnimatePresence>
       </ThemeProvider>
     </div>

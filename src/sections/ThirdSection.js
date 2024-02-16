@@ -122,6 +122,17 @@ const Text = styled.p`
     font-size: 1em;
   }
 `;
+const MarqueeH1 = styled.h1`
+font-family: Hauora, monospace;
+color: #fff;
+font-size: 4.3rem;
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+
+@media only screen and (max-width: 700px) {
+  font-size: 3rem;
+}
+
+`;
 const ThirdSection = () => {
   console.log("logged second");
   gsap.registerPlugin(ScrollTrigger);
@@ -225,40 +236,31 @@ const ThirdSection = () => {
     </Section>
    
     <div
-    style={{backgroundColor:'#181818'}}
+  style={{ backgroundColor: '#181818', border: '2px solid #fff', borderRadius: '10px', padding: '10px' }}
      >
        <Marquee speed={400}
        direction="left"
        >
-         <h1
-           style={{
-             fontFamily: "Hauora, monospace",
-             color: "#fff",
-             fontSize: "5rem",
-             textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
-      
-           }}
-           whileHover={{
-             textShadow: "0 0 20px rgba(255, 255, 255, 1)",
+          <MarqueeH1
+          
+          whileHover={{
+            textShadow: "0 0 20px rgba(255, 255, 255, 0.8)",
+       
+          }}
         
-           }}
          >
            Enjoy Awesome Features.
-         </h1>
-         <h1
-           style={{
-             fontFamily: "Hauora, monospace",
-             color: "#fff",
-             fontSize: "5rem",
-             textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
+         </MarqueeH1>
+         <MarqueeH1
+          
+          whileHover={{
+            textShadow: "0 0 20px rgba(255, 255, 255, 0.8)",
+       
+          }}
         
-           }}
-           whileHover={{
-             textShadow: "0 0 20px rgba(255, 255, 255, 1)",
-           }}
          >
            Get To Know Amazing People.
-         </h1>
+         </MarqueeH1>
        
        </Marquee>
        </div>

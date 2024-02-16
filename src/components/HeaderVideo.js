@@ -69,6 +69,17 @@ padding: 0.5rem;
   }
 
   `
+  const MarqueeH1 = styled(motion.h1)`
+  font-family: Hauora, monospace;
+  color: #fff;
+  font-size: 4.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+  @media only screen and (max-width: 700px) {
+    font-size: 3rem;
+  }
+
+`;
 
 const HeaderVideo = () => {
   
@@ -110,7 +121,7 @@ const HeaderVideo = () => {
 
        </motion.div>
        
-       <motion.h2 >Let's cookup some good memories. <br />Join a vibrant community where creativity knows no bounds. 
+       <motion.h2 >Join a vibrant community where creativity knows no bounds. 
          </motion.h2>
        <motion.div  className="cta-images">
         <img className="cta-image" src={ctaImage1} alt="" />
@@ -120,53 +131,18 @@ const HeaderVideo = () => {
       <motion.div
     
     >
-      <Marquee speed={400}>
-        <motion.h1
-          style={{
-            fontFamily: "Hauora, monospace",
-            color: "#fff",
-            fontSize: "5rem",
-            textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
-     
-          }}
-          whileHover={{
-            textShadow: "0 0 20px rgba(255, 255, 255, 1)",
-       
-          }}
-        >
-          Discover.
-        </motion.h1>
-        <motion.h1
-          style={{
-            fontFamily: "Hauora, monospace",
-            color: "#fff",
-            fontSize: "5rem",
-            textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
-       
-          }}
-          whileHover={{
-            textShadow: "0 0 20px rgba(255, 255, 255, 1)",
-       
-          }}
-        >
-          Connect.
-        </motion.h1>
-        <motion.h1
-          style={{
-            fontFamily: "Hauora, monospace",
-            color: "#fff",
-            fontSize: "5rem",
-            textShadow: "0 0 10px rgba(255, 255, 255, 0.5)",
-         
-          }}
-          whileHover={{
-            textShadow: "0 0 20px rgba(255, 255, 255, 1)",
-          
-          }}
-        >
-          Share.
-        </motion.h1>
-      </Marquee>
+     <Marquee speed={400}>
+     <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
+  Discover.
+</MarqueeH1>
+<MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
+  Connect.
+</MarqueeH1>
+<MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
+  Share.
+</MarqueeH1>
+</Marquee>
+
     </motion.div>
       <VideoComp/>
    
