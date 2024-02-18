@@ -64,7 +64,7 @@ const Images = styled.div`
   }
 `
 
-const FourthSection = () => {
+const FifthSection = () => {
   gsap.registerPlugin(ScrollTrigger)
   const sectionRef = useRef(null)
   const imageRef = useRef(null);
@@ -120,7 +120,8 @@ const FourthSection = () => {
         <img style={{ height:'6rem',width:'18rem',padding:'0.5rem',cursor:'pointer'}} src={appStore} alt="" />
       </Images>
     </Section>
+    
   )
 }
 
-export default FourthSection
+export default FifthSection

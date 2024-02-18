@@ -3,23 +3,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/Images/Logo.png";
+import { Link } from "react-router-dom";
+import {motion} from 'framer-motion'
 
-const Headers = styled.header`
+const Headers = styled(motion.header)`
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
+  /* padding: 1rem 5rem; */
   background: linear-gradient(to right, rgba(43, 43, 42, 1), rgba(93, 93, 93, 1), rgba(34, 34, 33, 1));
   color: white;
   position: relative;
   z-index: 3;
-  @media only Screen and (max-width: 64em) {
-    padding: 0.5rem 3rem;
-  }
-  @media only Screen and (max-width: 40em) {
-    padding: 0.5rem 1.5rem;
-  }
+
 `;
 
 const Logo = styled.a`
@@ -30,6 +27,7 @@ const Logo = styled.a`
   cursor: pointer;
   img{
  width: 3.4rem;
+ margin-left: 2rem;
  height: 3.4rem;
  filter: brightness(0) invert(1) grayscale(1);
  user-select: none;
@@ -77,7 +75,8 @@ const Nav = styled.nav`
 
 const Button = styled.button`
  background: linear-gradient(to right, rgba(0,126,242,1), rgba(0,58,108,1));
-  padding: 1rem;
+  padding: 0.7rem;
+  margin-right: 2rem;
   border-radius: 0.3rem;
   border: none;
   font-size: 1.2rem;
@@ -90,6 +89,7 @@ const Button = styled.button`
   }
   @media only Screen and (max-width: 40em) {
     font-size: 1.2rem;
+    margin-right: 0;
     &:hover {
       transform: none;
     }
@@ -104,6 +104,7 @@ const HamburgerBtn = styled.button`
     display: inline-block;
   }
   position: relative;
+  margin-right: 1.5rem;
   background-color: transparent;
   color: white;
   width: 2.4rem;
@@ -147,7 +148,6 @@ const MobileMenu = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
   overflow-x: hidden;
   position: absolute;
   top: 100%;
@@ -194,23 +194,36 @@ export const Header = () => {
 
 
   return (
-    <Headers ref={ref}>
+    <Headers 
+    initial={{
+      height: 0,
+      opacity: 0, 
+    }}
+    animate={{
+      opacity: 1,
+      height: "5rem", 
+    }}
+    transition={{
+      delay: 5,
+      duration: 1,
+    }}
+    ref={ref}>
       <Logo>
         <img src={logo} alt="TagSocial" />
       </Logo>
       <Nav>
-        <a href="#home" onClick={(e) => scrollUp("home", e)}>
+        <Link to='/'>
           Home
-        </a>
-        <a href="#about" onClick={(e) => scrollUp("about", e)}>
+        </Link>
+        <Link to='/features'>
            Features
-        </a>
-        <a href="#services" onClick={(e) => scrollUp("services", e)}>
+        </Link>
+        <Link to='/faqs'>
           FAQs
-        </a>
-        <a href="#services" onClick={(e) => scrollUp("services", e)}>
+        </Link>
+        <Link to='/terms-and-conditions'>
           Privacy Policy
-        </a>
+        </Link>
         <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
           <Button>Download</Button>
         </a>

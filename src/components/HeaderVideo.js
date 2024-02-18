@@ -10,8 +10,7 @@ import Marquee from "react-fast-marquee";
 
   const Title = styled(motion.div)`
   overflow: hidden;
-  height: 0;
-  padding-top : 1.5rem;
+height: 0;
   z-index: 5;
   display: flex;
   margin: auto;
@@ -103,14 +102,14 @@ const HeaderVideo = () => {
   <Title
   initial={{
     height: 0,
-    opacity: 0, // initial height value
+    opacity: 0, 
   }}
   animate={{
     opacity: 1,
-    height: "27rem", // or a specific pixel value like '200px'
+    height: "30rem", 
   }}
   transition={{
-    delay: 4,
+    delay: 5,
     duration: 1,
   }}
 >
@@ -128,10 +127,9 @@ const HeaderVideo = () => {
         <img className="cta-image" src={ctaImage2} alt="" />
        </motion.div>
       </Title>
-      <motion.div
+     
     
-    >
-     <Marquee speed={400}>
+     <Marquee  speed={400}>
      <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
   Discover.
 </MarqueeH1>
@@ -143,7 +141,6 @@ const HeaderVideo = () => {
 </MarqueeH1>
 </Marquee>
 
-    </motion.div>
       <VideoComp/>
    
 </>

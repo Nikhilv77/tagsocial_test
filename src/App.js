@@ -3,21 +3,19 @@ import GlobalStyles from './styles/GlobalStyles'
 import { system } from './styles/Themes'
 
 import { useState, useEffect, useRef } from 'react'
-import Home from './sections/Home'
-
 import { AnimatePresence } from 'framer-motion'
-import SecondSection from './sections/SecondSection'
-import ThirdSection from './sections/ThirdSection'
 import './font.css'
-import FourthSection from './sections/FourthSection'
 import Loader from './components/Loader'
-import FifthSection from './sections/FifthSection'
-import SixthSection from './sections/SixthSection'
-import Footer from './sections/FooterSection'
+import FaqsPage from './pages/FaqsPage'
+import PrivacyPage from './pages/PrivacyPolicyPage'
+import HomePage from './pages/HomePage'
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+
 
 
 function App() {
   const [Loaded, setLoaded] = useState(false)
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,13 +28,13 @@ function App() {
       <ThemeProvider theme={system}>
         <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence>
         <AnimatePresence>
-              <Home />
-          <SecondSection />
-          <ThirdSection />
-          <FourthSection />
-          <SixthSection/>
-          <FifthSection />
-          <Footer/>
+          <BrowserRouter>
+          <Routes>
+            <Route path='/' element = {<HomePage/>}/>
+            <Route path='/faqs' element = {<FaqsPage/>}/>
+            <Route path='/terms-and-conditions' element = {<PrivacyPage/>}/>
+          </Routes>
+          </BrowserRouter>
         </AnimatePresence>
       </ThemeProvider>
     </div>
