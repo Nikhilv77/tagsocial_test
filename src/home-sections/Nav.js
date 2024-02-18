@@ -204,7 +204,7 @@ export const Header = () => {
       height: "5rem", 
     }}
     transition={{
-      delay: 5,
+      delay: 1,
       duration: 1,
     }}
     ref={ref}>

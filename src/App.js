@@ -26,7 +26,7 @@ function App() {
     <div>
       <GlobalStyles />
       <ThemeProvider theme={system}>
-        <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence>
+        {/* <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence> */}
         <AnimatePresence>
           <BrowserRouter>
           <Routes>

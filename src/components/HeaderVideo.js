@@ -109,7 +109,7 @@ const HeaderVideo = () => {
     height: "30rem", 
   }}
   transition={{
-    delay: 5,
+    delay: 1,
     duration: 1,
   }}
 >

@@ -9,6 +9,9 @@
   @media (max-width: 576px) {
     padding: calc(var(--mantine-spacing-xl) * 1.5);
   }
+  @media (max-width: 720px) {
+    width: 95vw;
+  }
 }
 
 .title {
