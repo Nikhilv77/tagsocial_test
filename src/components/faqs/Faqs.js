@@ -6,7 +6,7 @@ const placeholder =
 
 const faqStyles = {
   wrapper: {
-    paddingTop: 'calc(var(--mantine-spacing-xl) * 2)',
+    paddingTop: 'calc(var(--mantine-spacing-xl) * 4)',
     paddingBottom: 'calc(var(--mantine-spacing-xl) * 2)',
     minHeight: '650px',
     fontFamily: "'Times New Roman', Times, serif",

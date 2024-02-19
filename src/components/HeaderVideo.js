@@ -98,7 +98,7 @@ const HeaderVideo = () => {
   }
 
   return(
-    <>
+    <div style={{marginTop:'11vh'}}>
   <Title
   initial={{
     height: 0,
@@ -143,7 +143,7 @@ const HeaderVideo = () => {
 
       <VideoComp/>
    
-</>
+</div>
   );
 };
 

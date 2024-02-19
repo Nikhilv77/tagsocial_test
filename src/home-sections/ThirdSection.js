@@ -69,6 +69,7 @@ const TitleContainer = styled.div`
   left: 0;
 
   @media screen and (max-width: 48em) {
+   
     top: 0;
     right: 2rem;
   }

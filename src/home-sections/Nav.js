@@ -5,6 +5,7 @@ import styled from "styled-components";
 import logo from "../assets/Images/Logo.png";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
+gsap.registerPlugin(ScrollTrigger);
 
 const Headers = styled(motion.header)`
   display: flex;
@@ -185,22 +186,27 @@ export const Header = () => {
   //const handleClick = () => setClick(!click);
   const ref = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
 
-  const scrollUp = (id, e) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "end",
-      inline: "nearest",
+  useEffect(() => {
+    const header = ref.current;
+
+    // ScrollTrigger setup
+    ScrollTrigger.create({
+      start: "top",
+      end: "bottom",
+      onUpdate: self => {
+        // Check the direction of scroll
+        const direction = self.direction === 1 ? "down" : "up";
+
+        // Toggle visibility based on scroll direction
+        if (direction === "up") {
+          gsap.to(header, { top: 0 });
+        } else {
+          gsap.to(header, { top: "-100%" });
+        }
+      }
     });
-  };
-
-  const handleClick = (id, e) => {
-    setClick(!click);
-    scrollUp(id, e);
-  };
+  }, []);
 
 
   return (

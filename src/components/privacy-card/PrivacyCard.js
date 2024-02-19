@@ -60,7 +60,7 @@ const TermsAndConditionsPage = () => {
 const MotionContainer = styled(motion.div)`
   background-color: #181818; /* Dark background color */
   color: #fff; /* Text color */
-  padding: 1.2rem;
+  padding: 14vh 1.2rem 1.2rem 1.2rem;
   width: 80vw;
   margin: auto;
 `;
