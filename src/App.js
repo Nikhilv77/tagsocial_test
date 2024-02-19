@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoaded(true)
-    }, 2300)
+    }, 1000)
   }, [])
   return (
     <div>

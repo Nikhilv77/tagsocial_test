@@ -10,7 +10,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import thirdSectionImg1 from '../assets/Images/thirdsection-1.png'
 import thirdSectionImg2 from '../assets/Images/thirdsection-2.png'
 import Marquee from "react-fast-marquee";
-import thirdSectionImg3 from '../assets/Images/thirdsection-3.png'
 const Section = styled.section`
   width: 100vw;
   min-height: 100vh;
@@ -69,13 +68,6 @@ const TitleContainer = styled.div`
   top: 0;
   left: 0;
 
-  & > *:nth-child(2) {
-    margin-left: 0rem;
-  }
-  & > *:nth-child(3) {
-    margin-left:3rem;
-  }
-
   @media screen and (max-width: 48em) {
     top: 0;
     right: 2rem;
@@ -102,7 +94,8 @@ const Title = styled.h1`
     font-size: 3em;
   }
   @media screen and (max-width: 48em) {
-    font-size: 2em;
+    font-size: 1.8em;
+    margin-left: 2rem;
   }
 `;
 const Text = styled.p`
@@ -173,8 +166,8 @@ const ThirdSection = () => {
           scrub: 7,
         },
       })
-      .to(video1Elem, { top: "5%", right: "10%", scale: 1 },"key1")
-      .to(video2Elem, { top: "5%", right: "-5%", scale: 1 },"key1").to(video3Elem, { right: "2%", bottom : '5%', scale: 1 },"key1")
+      .to(video1Elem, { top: "8%", right: "10%", scale: 1 },"key1")
+      .to(video2Elem, { top: "8%", right: "-5%", scale: 1 },"key1")
       ;
 
     elements("h1,p").forEach((el) =>
@@ -226,7 +219,7 @@ const ThirdSection = () => {
        <TitleContainer ref={titleRef}>
         <Title>Transforming Social Connections
 </Title>
-        <Text>Embark on a journey of discovery, <br />as Tags Social connects you with like-minded individuals at new locations. </Text>
+        <Text>Embark on a journey of discovery, as Tags Social connects you with like-minded individuals. </Text>
       
       </TitleContainer>
       <V1 ref={videoRef1} src={thirdSectionImg1}  />
@@ -239,15 +232,12 @@ const ThirdSection = () => {
   style={{ backgroundColor: '#181818', border: '2px solid #fff', borderRadius: '10px', padding: '10px' }}
      >
        <Marquee speed={400}
-       direction="left"
+       direction="right"
        >
           <MarqueeH1
-          
           whileHover={{
             textShadow: "0 0 20px rgba(255, 255, 255, 0.8)",
-       
           }}
-        
          >
            Enjoy Awesome Features.
          </MarqueeH1>

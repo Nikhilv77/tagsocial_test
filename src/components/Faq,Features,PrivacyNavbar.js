@@ -4,19 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/Images/Logo.png";
 import { Link } from "react-router-dom";
+import {motion} from 'framer-motion'
 
-const Headers = styled.header`
-
+const Headers = styled(motion.header)`
   display: flex;
-  height: 5rem;
+  height: 11vh;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1rem 5rem; */
-  background: linear-gradient(to right, rgba(43, 43, 42, 1), rgba(93, 93, 93, 1), rgba(34, 34, 33, 1));
+  background: rgba(24, 24, 24, 0.5); /* #181818 color */
+  backdrop-filter: blur(10px) !important; 
   color: white;
-  position: relative;
+  position: fixed;
   z-index: 3;
-
+  width: 100vw;
 `;
 
 const Logo = styled.a`
@@ -36,15 +36,23 @@ const Logo = styled.a`
 `;
 
 const Nav = styled.nav`
- width:80%;
+width: 70%;
+
  font-family: 'Times New Roman', Times, serif;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.3s;
-  @media only Screen and (max-width: 48em) {
-    display: none;
+ display: flex;
+ align-items: center;
+ justify-content:space-between;
+ transition: all 0.3s;
+ @media only Screen and (max-width: 1117px) {
+   display: none;
   }
+  .no-hover {
+  text-decoration: none; /* Optional: Remove underline on hover */
+}
+
+.no-hover:hover::after {
+  width: 0; /* Set width to 0 on hover to disable the hover effect */
+}
   a {
     font-weight: 600;
     line-height: 1.5;
@@ -58,9 +66,9 @@ const Nav = styled.nav`
       background: transparent;
       transition: width 0.5s;
     }
-    &:not(:last-child):hover::after {
+    &:hover::after {
       width: 100%;
-      background: linear-gradient(to right, rgba(0,126,242,1), rgba(0,58,108,1));
+      background: linear-gradient(109.6deg, rgb(6, 183, 249) 11.2%, rgb(25, 74, 236) 91.1%);
     }
     /* &:not(:last-child) {
       margin-right: 2rem;
@@ -74,7 +82,8 @@ const Nav = styled.nav`
 `;
 
 const Button = styled.button`
- background: linear-gradient(to right, rgba(0,126,242,1), rgba(0,58,108,1));
+user-select: none;
+ background: linear-gradient(to right, rgba(0,126,242,1), rgb(11, 93, 165));
   padding: 0.7rem;
   margin-right: 2rem;
   border-radius: 0.3rem;
@@ -87,7 +96,7 @@ const Button = styled.button`
   &:focus {
     transform: scale(0.9);
   }
-  @media only Screen and (max-width: 40em) {
+  @media only Screen and (max-width: 1117px) {
     font-size: 1.2rem;
     margin-right: 0;
     &:hover {
@@ -100,7 +109,7 @@ const Button = styled.button`
 `;
 const HamburgerBtn = styled.button`
   display: none;
-  @media only screen and (max-width: 48em) {
+  @media only screen and (max-width: 1117px) {
     display: inline-block;
   }
   position: relative;
@@ -113,6 +122,7 @@ const HamburgerBtn = styled.button`
   margin-top: 0rem;
   transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
+
 
 
   &::before,
@@ -141,8 +151,8 @@ const HamburgerBtn = styled.button`
 
 const MobileMenu = styled.nav`
   display: none;
-  
-  @media only Screen and (max-width: 48em) {
+
+  @media only Screen and (max-width: 1117px) {
     display: flex;
   }
   flex-direction: column;
@@ -156,9 +166,9 @@ const MobileMenu = styled.nav`
   visibility: ${(props) => (props.clicked ? "visible" : "hidden")};
 
   z-index: 10;
-  background: linear-gradient(to right, rgba(43, 43, 42, 1), rgba(93, 93, 93, 1), rgba(34, 34, 33, 1));
-  border-radius:1rem; /* Adjust the alpha value (0.7) for opacity */
-  backdrop-filter: blur(5px); /* Adds a blur effect for glass-like appearance */
+  background: rgba(24, 24, 24, 0.93);
+  backdrop-filter: blur(7px) !important; 
+  border-radius:1rem; /* Adjust the alpha value (0.7) for opacity */ /* Adds a blur effect for glass-like appearance */
   margin: 0.5rem;
   a {
     color: white;
@@ -194,27 +204,28 @@ export const FAQFeaturesPrivacyNav = () => {
 
 
   return (
+
     <Headers 
     ref={ref}>
       <Logo>
         <img src={logo} alt="TagSocial" />
       </Logo>
       <Nav>
-        <Link to='/'>
-          Home
-        </Link>
-        <Link to='/features'>
-           Features
-        </Link>
-        <Link to='/faqs'>
-          FAQs
-        </Link>
-        <Link to='/terms-and-conditions'>
-          Privacy Policy
-        </Link>
-        <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Download</Button>
-        </a>
+        <div style={{
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'space-between',
+          width:'60%',
+    
+        }}>
+           <a href="/">Home</a>
+<a href="/features">Features</a>
+<a href="/faqs">FAQs</a>
+<a href="/terms-and-conditions">Privacy Policy</a>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.syneidisi.tagsocial" target="_blank" class="no-hover">
+  <Button>Download</Button>
+</a>
       </Nav>
      
       <HamburgerBtn clicked={+click} onClick={() => setClick(!click)} >
@@ -222,22 +233,15 @@ export const FAQFeaturesPrivacyNav = () => {
       </HamburgerBtn>
 
       <MobileMenu clicked={+click}>
-        <a href="#home" onClick={(e) => handleClick("home", e)}>
-          Home
-        </a>
-        <a href="#about" onClick={(e) => handleClick("about", e)}>
-          Features
-        </a>
-        <a href="#about" onClick={(e) => handleClick("about", e)}>
-          FAQs
-        </a>
-        <a href="#services" onClick={(e) => handleClick("services", e)}>
-          Privacy Policy
-        </a>
-        <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Download</Button>
-        </a>
+      <a href="/">Home</a>
+<a href="/features">Features</a>
+<a href="/faqs">FAQs</a>
+<a href="/terms-and-conditions">Privacy Policy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.syneidisi.tagsocial" target="_blank" class="no-hover">
+  <Button>Download</Button>
+</a>
       </MobileMenu>
     </Headers>
+  
   );
 };

@@ -205,7 +205,7 @@ const FourthSection = () => {
           places around you.</Text>
       </TitleContainer>
       <V1 ref={videoRef1} src={thirdSectionImg1} />
-      <V2 ref={videoRef2} src={thirdSectionImg2} />
+      {/* <V2 ref={videoRef2} src={thirdSectionImg2} /> */}
     </Section>
   
     <div style={{ backgroundColor: '#181818', border: '2px solid #fff', borderRadius: '10px', padding: '10px' }}>

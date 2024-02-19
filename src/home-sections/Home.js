@@ -10,12 +10,19 @@ import Navbar from "../components/Navbar";
 import { useEffect } from "react";
 import {motion} from 'framer-motion'
 import {Header} from "./Nav";
+
+
 const Section = styled.section`
-position: relative;
-background-color: #181818;
-height: 100vh;
-overflow: hidden;
-`
+  position: relative;
+  background-color: #181818;
+  overflow: hidden;
+  height: 100vh;
+
+  @media (min-width: 1024px) and (min-height: 600px) and (max-width: 1024px) and (max-height: 600px) {
+    height: 120vh;
+  }
+`;
+
 const Home = () => {
   useEffect(()=>{
     (

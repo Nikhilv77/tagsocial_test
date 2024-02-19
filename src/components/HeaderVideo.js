@@ -30,7 +30,7 @@ height: 0;
 
     user-select: none;
  @media (max-width:768px){
-  font-size: 3.5em;
+  font-size: 2.9em;
  }
   }
 
@@ -49,7 +49,7 @@ height: 0;
     align-items: center;
 padding: 0.5rem;
 @media (max-width:768px){
-  font-size: 1.5em;
+  font-size: 1.25em;
  }
   }
   .cta-images{
@@ -109,8 +109,8 @@ const HeaderVideo = () => {
     height: "30rem", 
   }}
   transition={{
-    delay: 1,
-    duration: 1,
+    delay: 2.5,
+    duration: 0.9,
   }}
 >
        <motion.div
