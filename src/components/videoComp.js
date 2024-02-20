@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import video from '../assets/banner2.mp4'
+import video from '../assets/Images/hero-picture.png'
 import { motion, useAnimation } from "framer-motion";
 
 export const VideoComp = () => {
@@ -21,11 +21,8 @@ export const VideoComp = () => {
   }, [controls]);
 
   return (
-    <motion.video
+    <motion.img
       src={video}
-      muted
-      loop
-      autoPlay
       initial={{ scale: 1, opacity: 1, rotate: 0, clipPath: "ellipse(100% 100% at 50% 50%)" }}
       animate={controls}
       style={{ height: "100vh", width: "100vw", objectFit: "cover",zIndex:999 }}
