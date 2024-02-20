@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
 import logo from "../assets/Images/Logo.png";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
@@ -82,22 +82,41 @@ width: 70%;
   }
 `;
 
+const coolEffectAnimation = keyframes`
+  0% {
+
+    filter: hue-rotate(0deg);
+  }
+  50% {
+   
+    filter: hue-rotate(90deg);
+  }
+  100% {
+
+    filter: hue-rotate(0deg);
+  }
+`;
+
 const Button = styled.button`
-user-select: none;
- background: linear-gradient(to right, rgba(0,126,242,1), rgb(11, 93, 165));
-  padding: 0.7rem;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 2px solid #fff !important;
+  background: linear-gradient(to right, rgba(0, 126, 242, 1), rgb(11, 93, 165));
+  padding: 0.8rem 1.4rem 0.8rem 1.4rem;
   margin-right: 2rem;
-  border-radius: 0.3rem;
-  border: none;
+  border-radius: 999px; /* Set border-radius to a high value */
   font-size: 1.2rem;
   color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: height 0.2s;
-  &:focus {
-    transform: scale(0.9);
+  transition: height 0.2s, transform 0.2s;
+  &:hover{
+    animation: ${coolEffectAnimation} 3s infinite; /* Apply the animation */
   }
-  @media only Screen and (max-width: 1117px) {
+
+  @media only screen and (max-width: 1117px) {
     font-size: 1.2rem;
     margin-right: 0;
     &:hover {
@@ -106,8 +125,10 @@ user-select: none;
     &:focus {
       transform: none;
     }
+    animation: none; /* Disable animation on smaller screens */
   }
 `;
+
 const HamburgerBtn = styled.button`
   display: none;
   @media only screen and (max-width: 1117px) {
@@ -167,7 +188,7 @@ const MobileMenu = styled.nav`
   visibility: ${(props) => (props.clicked ? "visible" : "hidden")};
 
   z-index: 10;
-  background: rgba(24, 24, 24, 0.93);
+  background: rgba(24, 24, 24, 0.98);
   backdrop-filter: blur(7px) !important; 
   border-radius:1rem; /* Adjust the alpha value (0.7) for opacity */ /* Adds a blur effect for glass-like appearance */
   margin: 0.5rem;
@@ -229,7 +250,7 @@ export const FAQFeaturesPrivacyNav = () => {
 <a href="/terms-and-conditions">Privacy Policy</a>
         </div>
         <a href="https://play.google.com/store/apps/details?id=com.syneidisi.tagsocial" target="_blank" class="no-hover">
-  <Button>Download</Button>
+  <Button>Download <svg xmlns="http://www.w3.org/2000/svg" height='24' width='24' fill="#fff" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 511.998 511.998"><path fill-rule="nonzero" d="M255.999 0c70.684 0 134.695 28.658 181.018 74.981 46.324 46.324 74.981 110.334 74.981 181.018 0 70.691-28.657 134.695-74.981 181.018-46.323 46.324-110.327 74.981-181.018 74.981s-134.694-28.657-181.018-74.981C28.658 390.694 0 326.69 0 255.999c0-70.684 28.658-134.694 74.981-181.018C121.305 28.658 185.308 0 255.999 0zm-74.995 203.995c-29.412-16.955-43.962 6.609-27.542 23.789l84.234 95.914c15.311 15.318 21.289 15.318 36.607 0l84.234-95.914c16.303-17.26 2.086-40.686-27.55-23.789l-74.988 44.548-74.995-44.548zM410.99 101.009c-39.657-39.657-94.473-64.2-154.991-64.2-60.525 0-115.333 24.543-154.99 64.2-39.657 39.657-64.2 94.472-64.2 154.99 0 60.526 24.543 115.334 64.2 154.991 39.657 39.657 94.465 64.199 154.99 64.199 60.526 0 115.334-24.542 154.991-64.199 39.657-39.657 64.199-94.465 64.199-154.991 0-60.518-24.542-115.333-64.199-154.99z"/></svg></Button>
 </a>
       </Nav>
      
@@ -243,7 +264,7 @@ export const FAQFeaturesPrivacyNav = () => {
 <a href="/faqs">FAQs</a>
 <a href="/terms-and-conditions">Privacy Policy</a>
         <a href="https://play.google.com/store/apps/details?id=com.syneidisi.tagsocial" target="_blank" class="no-hover">
-  <Button>Download</Button>
+  <Button>Download <svg xmlns="http://www.w3.org/2000/svg" height='24' width='24' fill="#fff" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 511.998 511.998"><path fill-rule="nonzero" d="M255.999 0c70.684 0 134.695 28.658 181.018 74.981 46.324 46.324 74.981 110.334 74.981 181.018 0 70.691-28.657 134.695-74.981 181.018-46.323 46.324-110.327 74.981-181.018 74.981s-134.694-28.657-181.018-74.981C28.658 390.694 0 326.69 0 255.999c0-70.684 28.658-134.694 74.981-181.018C121.305 28.658 185.308 0 255.999 0zm-74.995 203.995c-29.412-16.955-43.962 6.609-27.542 23.789l84.234 95.914c15.311 15.318 21.289 15.318 36.607 0l84.234-95.914c16.303-17.26 2.086-40.686-27.55-23.789l-74.988 44.548-74.995-44.548zM410.99 101.009c-39.657-39.657-94.473-64.2-154.991-64.2-60.525 0-115.333 24.543-154.99 64.2-39.657 39.657-64.2 94.472-64.2 154.99 0 60.526 24.543 115.334 64.2 154.991 39.657 39.657 94.465 64.199 154.99 64.199 60.526 0 115.334-24.542 154.991-64.199 39.657-39.657 64.199-94.465 64.199-154.991 0-60.518-24.542-115.333-64.199-154.99z"/></svg></Button>
 </a>
       </MobileMenu>
     </Headers>

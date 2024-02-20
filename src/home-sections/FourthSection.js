@@ -151,7 +151,7 @@ const FourthSection = () => {
         trigger: Elem,
         start: 'top top',
         end: `bottom+=500 bottom`,
-        scrub: 4,
+        scrub: 1,
         pin: true,
         pinSpacing: true,
       },
@@ -163,7 +163,7 @@ const FourthSection = () => {
           trigger: Elem,
           start: 'top top',
           end: `bottom+=700 bottom`,
-          scrub: 4,
+          scrub: 1,
         },
       })
       .to(video1Elem, { bottom: "1%", left: '-9%', scale: 1 }, 'key1')

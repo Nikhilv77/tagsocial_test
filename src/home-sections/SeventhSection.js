@@ -159,7 +159,7 @@ const SeventhSection = () => {
           trigger: Elem,
           start: "top top",
           end: `bottom+=700 bottom`,
-          scrub: 7,
+          scrub: 1,
         },
       })
       .to(video1Elem, { top: "18%", right: "-5%", scale: 1 },"key1")
@@ -174,7 +174,7 @@ const SeventhSection = () => {
             trigger: el,
             start: "top top",
             end: `bottom bottom`,
-            scrub: 2,
+            scrub: 1,
           },
           x: 100,
           opacity: 0,

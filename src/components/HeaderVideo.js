@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import BackgroundVideo from '../assets/header.mp4'
 import {motion} from 'framer-motion'
 import HeroImage from '../assets/Images/hero-image.png'
 import ctaImage1 from '../assets/Images/google-play.png'
@@ -27,6 +26,17 @@ height: 0;
     font-family: "Times Roman";
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
     font-size: clamp(3em, 5.3em, 5.3em);
+    text-shadow: 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 2px 2px 0px #333,
+                 2px 2px 0px #333,
+                 3px 3px 0px #333,
+                 3px 3px 0px #333,
+                4px 4px 0px #333;
+ 
 
     user-select: none;
  @media (max-width:768px){
@@ -36,6 +46,17 @@ height: 0;
 
   h2{
     font-family: "Times Roman";
+    text-shadow: 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 2px 2px 0px #333,
+                 2px 2px 0px #333,
+                 3px 3px 0px #333,
+                 3px 3px 0px #333,
+                4px 4px 0px #333 !important;
+  
     font-weight: 300;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
     font-size: clamp(1.3em, 2em, 2em);
@@ -69,6 +90,16 @@ padding: 0.5rem;
 
   `
   const MarqueeH1 = styled(motion.h1)`
+      text-shadow: 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 2px 2px 0px #333,
+                 2px 2px 0px #333,
+                 3px 3px 0px #333,
+                 3px 3px 0px #333,
+                4px 4px 0px #333 !important;
   font-family: Hauora, monospace;
   color: #fff;
   font-size: 4.5rem;

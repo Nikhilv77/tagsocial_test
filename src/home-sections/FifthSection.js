@@ -85,7 +85,7 @@ const FifthSection = () => {
         trigger: Elem,
         start: '5% top',
         end: `bottom top`,
-        scrub: 4,
+        scrub: 3,
         pin: true,
         pinSpacing: true,
       },
@@ -96,10 +96,10 @@ const FifthSection = () => {
         trigger: Elem,
         start: '5% top',
         end: `bottom top`,
-        scrub: 4,
+        scrub: 1,
       },
     })
-    .to(Text1Elem, { top: "-35%", scale: 1}) 
+    .to(Text1Elem, { top: "-45%", scale: 1}) 
     .to(Text2Elem, { top: "45%", scale: 1},"key1")
     .to(imageElem,{scale : 0.6, rotation: 25},"key1") 
   
