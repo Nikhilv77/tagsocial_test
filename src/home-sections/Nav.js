@@ -11,8 +11,9 @@ const Headers = styled(motion.header)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(24, 24, 24, 0.5); /* #181818 color */
-  backdrop-filter: blur(10px) !important; 
+  /* background: rgba(24, 24, 24, 0.5);  */
+  background:linear-gradient(135deg, rgba(43, 43, 42, 0.6), rgba(93, 93, 93, 0.6), rgba(34, 34, 33, 0.6));
+  backdrop-filter: blur(16px) !important; 
   color: white;
   position: fixed;
   z-index: 3;
@@ -38,7 +39,7 @@ const Logo = styled.a`
 const Nav = styled.nav`
 width: 70%;
  
- font-family: 'Times New Roman', Times, serif;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
  display: flex;
  align-items: center;
  justify-content:space-between;
@@ -99,15 +100,17 @@ const coolEffectAnimation = keyframes`
 `;
 
 const Button = styled.button`
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
   user-select: none;
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  border: 2px solid #fff !important;
-  background: linear-gradient(to right, rgba(0, 126, 242, 1), rgb(11, 93, 165));
-  padding: 0.8rem 1.4rem 0.8rem 1.4rem;
+  /* border: 2px solid #fff !important; */
+  border: none;
+  background:linear-gradient(135deg, rgba(0, 126, 242, 1), rgba(0, 58, 108, 1));
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   margin-right: 2rem;
-  border-radius: 999px; /* Set border-radius to a high value */
+  border-radius: 0.2rem; /* Set border-radius to a high value */
   font-size: 1.2rem;
   color: #fff;
   font-weight: 600;
@@ -174,11 +177,12 @@ const HamburgerBtn = styled.button`
 
 const MobileMenu = styled.nav`
   display: none;
-
+  margin-right: 0.5rem;
   @media only Screen and (max-width: 1117px) {
     display: flex;
   }
   flex-direction: column;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
@@ -199,7 +203,7 @@ const MobileMenu = styled.nav`
     font-size: 1.3rem;
     margin: 1.5rem;
     cursor: pointer;
-    font-family: 'Times New Roman', Times, serif;
+  
   }
 `;
 

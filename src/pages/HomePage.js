@@ -15,8 +15,8 @@ const HomePage = () => {
    <SecondSection />
    <ThirdSection />
    <SeventhSection/>
-   <FourthSection />
   <SixthSection/>
+   <FourthSection />
   <FifthSection />
   <Footer/>
   </div>

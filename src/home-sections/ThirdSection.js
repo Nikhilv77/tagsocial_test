@@ -19,7 +19,66 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
 `;
-
+const Blur1 = styled.div`
+height: 18rem;
+width: 14rem;
+position: absolute;
+left: -5%;
+top: 20%;
+border-radius: 70%;
+background-color: grey;
+filter: blur(72px);
+z-index: -999;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 9rem;
+    width: 7rem;
+  }
+  @media screen and (max-height:600px){
+    height:6rem;
+    width: 4rem;
+  }
+`
+const Blur2 = styled.div`
+height: 26rem;
+width: 18rem;
+position: absolute;
+right: -5%;
+bottom: 0;
+border-radius: 60%;
+background-color: grey;
+filter: blur(72px);
+z-index: -999;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 13rem;
+    width: 9rem;
+  }
+  @media screen and (max-height:600px){
+    height:8rem;
+    width: 5rem;
+  }
+`
+const Blur3 = styled.div`
+height: 13rem;
+width: 9rem;
+position: absolute;
+left: -5%;
+top: 0;
+border-radius: 60%;
+background-color: grey;
+filter: blur(72px);
+z-index: -999;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 6rem;
+    width: 4rem;
+  }
+  @media screen and (max-height:600px){
+    height:3rem;
+    width: 3rem;
+  }
+`
 const V1 = styled.img`
   position: absolute;
   top: -80%; /* initial position */
@@ -121,7 +180,7 @@ line-height: 1.8;
   text-transform: capitalize;
   text-transform: 0 0 4px #fff;
  
-  color: #fff;
+  color: #A8A8A8;
   font-family: 'Times Roman';
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -147,7 +206,7 @@ line-height: 1.8;
 const Button = styled.button`
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 600;
-  padding: 1rem 2.2rem 1rem 2.2rem;
+  padding: 0.8rem 2rem 0.8rem 2rem;
   font-size: calc(0.4em + 1vw);
   border: 1px solid #fff;
   background-color: #007fff;
@@ -192,7 +251,7 @@ const MarqueeH1 = styled.h1`
 font-family: Hauora, monospace;
 color: #fff;
 font-size: 4.3rem;
-background-color: #007FFF;
+background-color: #383838;
 
 @media only screen and (max-width: 700px) {
   font-size: 3rem;
@@ -283,6 +342,7 @@ const ThirdSection = () => {
           x: 0,
           opacity: 1,
         },
+        "key3"
       )
     );
     subElements("button").forEach((el) =>
@@ -303,7 +363,7 @@ const ThirdSection = () => {
         x: 0,
         opacity: 1,
       },
-      
+      "key3"
     )
   );
     return () => {
@@ -314,6 +374,9 @@ const ThirdSection = () => {
   return (
     <>
     <Section ref={sectionRef}>
+      <Blur1/>
+      <Blur2/>
+      <Blur3/>
        <TitleContainer ref={titleRef}>
         <Title>Transforming Social Connections
 </Title>

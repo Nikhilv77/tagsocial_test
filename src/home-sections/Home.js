@@ -18,10 +18,70 @@ const Section = styled.section`
   overflow: hidden;
   height: 100vh;
 
-  @media (min-width: 1024px) and (min-height: 600px) and (max-width: 1024px) and (max-height: 600px) {
+  /* @media (min-width: 1024px) and (min-height: 600px) and (max-width: 1024px) and (max-height: 600px) {
     height: 120vh;
-  }
+  } */
 `;
+const Blur1 = styled.div`
+height: 18rem;
+width: 14rem;
+position: absolute;
+left: -5%;
+top: 10%;
+border-radius: 70%;
+background-color: grey;
+filter: blur(72px);
+z-index: 1;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 9rem;
+    width: 7rem;
+  }
+  @media screen and (max-height:600px){
+    height:6rem;
+    width: 4rem;
+  }
+`
+const Blur2 = styled.div`
+height: 26rem;
+width: 18rem;
+position: absolute;
+right: -5%;
+top: 0;
+border-radius: 60%;
+background-color: grey;
+filter: blur(72px);
+z-index: 1;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 13rem;
+    width: 9rem;
+  }
+  @media screen and (max-height:600px){
+    height:8rem;
+    width: 5rem;
+  }
+`
+const Blur3 = styled.div`
+height: 13rem;
+width: 9rem;
+position: absolute;
+left: -5%;
+bottom: 0;
+border-radius: 60%;
+background-color: grey;
+filter: blur(72px);
+z-index: 1;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 6rem;
+    width: 4rem;
+  }
+  @media screen and (max-height:600px){
+    height:3rem;
+    width: 3rem;
+  }
+`
 
 const Home = () => {
   useEffect(()=>{
@@ -33,6 +93,9 @@ const Home = () => {
     )()
   },[])
   return <Section>
+  <Blur1/>
+  <Blur2/>
+  <Blur3/>
  <Header/>
     <HeaderVideo/>
   </Section>;

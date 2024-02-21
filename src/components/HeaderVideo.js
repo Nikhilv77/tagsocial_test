@@ -23,10 +23,10 @@ height: 0;
     padding: 0.5rem;
   }
   h1{
-    font-family: "Times Roman";
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
     font-size: clamp(3em, 5.3em, 5.3em);
-    text-shadow: 1px 1px 0px #333,
+    /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -36,7 +36,7 @@ height: 0;
                  3px 3px 0px #333,
                  3px 3px 0px #333,
                 4px 4px 0px #333;
- 
+  */
 
     user-select: none;
  @media (max-width:768px){
@@ -45,8 +45,8 @@ height: 0;
   }
 
   h2{
-    font-family: "Times Roman";
-    text-shadow: 1px 1px 0px #333,
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -55,7 +55,7 @@ height: 0;
                  2px 2px 0px #333,
                  3px 3px 0px #333,
                  3px 3px 0px #333,
-                4px 4px 0px #333 !important;
+                4px 4px 0px #333 !important; */
   
     font-weight: 300;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};

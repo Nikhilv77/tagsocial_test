@@ -16,7 +16,66 @@ const Section = styled.section`
   background-color: #181818;
   overflow: hidden;
 `;
-
+const Blur1 = styled.div`
+height: 18rem;
+width: 14rem;
+position: absolute;
+left: -5%;
+top: 10%;
+border-radius: 70%;
+background-color: grey;
+filter: blur(72px);
+z-index: -999;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 9rem;
+    width: 7rem;
+  }
+  @media screen and (max-height:600px){
+    height:6rem;
+    width: 4rem;
+  }
+`
+const Blur2 = styled.div`
+height: 26rem;
+width: 18rem;
+position: absolute;
+right: -5%;
+bottom: 0;
+border-radius: 60%;
+background-color: grey;
+filter: blur(72px);
+z-index: -999;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 13rem;
+    width: 9rem;
+  }
+  @media screen and (max-height:600px){
+    height:8rem;
+    width: 5rem;
+  }
+`
+const Blur3 = styled.div`
+height: 13rem;
+width: 9rem;
+position: absolute;
+left: -5%;
+bottom: 0;
+border-radius: 60%;
+background-color: grey;
+filter: blur(72px);
+z-index: -999;
+opacity: 0.5;
+@media screen and (max-width: 1120px) {
+    height: 6rem;
+    width: 4rem;
+  }
+  @media screen and (max-height:600px){
+    height:3rem;
+    width: 3rem;
+  }
+`
 const V1 = styled.img`
   position: absolute;
   top: 0;
@@ -99,7 +158,7 @@ const Title = styled.h1`
   font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
   text-transform: capitalize;
-  text-shadow: 1px 1px 0px #333,
+  /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -108,7 +167,7 @@ const Title = styled.h1`
                  3px 3px 0px #333,
                  4px 4px 0px #333,
                  4px 4px 0px #333,
-                5px 5px 0px #333;
+                5px 5px 0px #333; */
   color: #fff;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
@@ -129,9 +188,9 @@ line-height: 1.8;
   text-transform: capitalize;
   text-transform: 0 0 4px #fff;
  
-  color: #fff;
+  color: 	#A8A8A8;
   font-family: 'Times Roman';
-  text-shadow: 1px 1px 0px #333,
+  /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -140,8 +199,8 @@ line-height: 1.8;
                  2px 2px 0px #333,
                  2px 2px 0px #333,
                  1px 1px 0px #333,
-                2px 2px 0px #333;
-  /* filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3)); */
+                2px 2px 0px #333; */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
               
   @media screen and (max-width: 1120px) {
     font-size: calc(0.8em + 1vw);
@@ -194,7 +253,7 @@ const MarqueeH1 = styled.h1`
 font-family: Hauora, monospace;
 color: #fff;
 font-size: 4.3rem;
-background-color: #007FFF;
+background-color: #383838;
 
 @media only screen and (max-width: 700px) {
   font-size: 3rem;
@@ -319,6 +378,9 @@ const CameraSection = () => {
   return (
     <>
     <Section ref={sectionRef}>
+      <Blur1/>
+      <Blur2/>
+      <Blur3/>
       <V1 ref={videoRef1} src={secondSectionImage1}  />
       <V2 ref={videoRef2} src={secondSectionImage2}  />
       <TitleContainer ref={titleRef}>
