@@ -160,7 +160,7 @@ const HeaderVideo = () => {
       </Title>
      
     
-     <Marquee  speed={400}>
+     <Marquee  speed={250}>
      <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
   Discover.
 </MarqueeH1>

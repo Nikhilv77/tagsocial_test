@@ -384,7 +384,7 @@ const CameraSection = () => {
        <div
     style={{ backgroundColor: '#181818' }}
      >
-       <Marquee speed={400}>
+       <Marquee speed={250}>
          <MarqueeH1
           
            whileHover={{

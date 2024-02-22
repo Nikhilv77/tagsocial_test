@@ -1,6 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import '@fontsource/kaushan-script'
-import '@fontsource/sirin-stencil'
 
 
 const GlobalStyles = createGlobalStyle`

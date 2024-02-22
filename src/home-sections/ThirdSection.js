@@ -393,7 +393,7 @@ const ThirdSection = () => {
     <div
   style={{ backgroundColor: '#181818', borderRadius: '10px', padding: '10px' }}
      >
-       <Marquee speed={400}
+       <Marquee speed={250}
        direction="right"
        >
           <MarqueeH1

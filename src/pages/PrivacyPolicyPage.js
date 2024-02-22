@@ -8,16 +8,15 @@ import { useEffect } from "react";
 
 
 const PrivacyPage = () => {
-  useEffect(()=>{
-    (
-      async()=>{
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-        const locomotiveScroll = new LocomotiveScroll();
-      }
-    )()
-  },[])
+  // useEffect(()=>{
+  //   (
+  //     async()=>{
+  //       const LocomotiveScroll = (await import('locomotive-scroll')).default;
+  //       const locomotiveScroll = new LocomotiveScroll();
+  //     }
+  //   )()
+  // },[])
   const theme = createTheme({
- 
   });
   
   return <div style={{backgroundColor:'#181818'}}>

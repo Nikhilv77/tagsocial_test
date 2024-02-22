@@ -99,15 +99,17 @@ const coolEffectAnimation = keyframes`
 `;
 
 const Button = styled.button`
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
   user-select: none;
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  border: 2px solid #fff !important;
-  background: linear-gradient(to right, rgba(0, 126, 242, 1), rgb(11, 93, 165));
-  padding: 0.8rem 1.4rem 0.8rem 1.4rem;
+  /* border: 2px solid #fff !important; */
+  border: none;
+  background:linear-gradient(135deg, rgba(0, 126, 242, 1), rgba(0, 58, 108, 1));
+  padding: 0.8rem 0.8rem 0.8rem 0.8rem;
   margin-right: 2rem;
-  border-radius: 999px; /* Set border-radius to a high value */
+  border-radius: 0.2rem; /* Set border-radius to a high value */
   font-size: 1.2rem;
   color: #fff;
   font-weight: 600;

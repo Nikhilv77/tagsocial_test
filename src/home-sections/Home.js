@@ -84,14 +84,7 @@ opacity: 0.5;
 `
 
 const Home = () => {
-  useEffect(()=>{
-    (
-      async()=>{
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-        const locomotiveScroll = new LocomotiveScroll();
-      }
-    )()
-  },[])
+
   return <Section>
   <Blur1/>
   <Blur2/>
