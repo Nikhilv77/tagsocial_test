@@ -4,8 +4,8 @@ import React from "react";
 import styled from "styled-components";
 import i1 from '../assets/Images/features/hero-1.png'
 import i2 from '../assets/Images/features/hero-2.png'
-import i3 from '../assets/Images/features/section-4-2.png'
-import i4 from '../assets/Images/features/section-5-2.png'
+import i3 from '../assets/Images/features/hero-3.png'
+import i4 from '../assets/Images/features/hero-4.png'
 
 import Marquee from "react-fast-marquee";
 const Section = styled.section`
@@ -80,7 +80,7 @@ opacity: 0.5;
 `
 const V1 = styled.img`
   position: absolute;
-  top: -2%;
+  top: 0;
   left:-20%; /* initial position */
   width: 60%;
   height: 60vh;
@@ -107,24 +107,26 @@ user-select: none;
 `;
 const V3 = styled.img`
   position: absolute;
-  left:-20%;
-  bottom: -2%;
+  left:-15%;
+  bottom: 5%;
  user-select: none;
-  width: 60%;
-  height: 40vh;
+  width: 64%;
+  height: 34vh;
   object-fit: contain;
   object-position: bottom;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+  transform: rotate(8deg);
   z-index: 2;
 `;
 const V4 = styled.img`
   position: absolute;
   right: -20%;
   user-select: none;
-  bottom: -2%;
+  bottom: -7%;
   width: 60%;
-  height: 60vh;
+  height: 40vh;
   object-fit: contain;
+  transform: rotate(-17deg);
   object-position: bottom;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
   z-index: 2;
@@ -159,7 +161,7 @@ cursor: pointer;
 
 
 const Title = styled.h1`
-  font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
+  font-size: calc(2.6em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
   text-transform: capitalize;
   /* text-shadow: 1px 1px 0px #333,
@@ -173,8 +175,8 @@ const Title = styled.h1`
                  4px 4px 0px #333,
                 5px 5px 0px #333; */
   color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
+  font-family: Hauora, monospace;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
 
   @media screen and (max-width: 1120px) {
    /* Adjust font size for smaller screens */
@@ -186,7 +188,7 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+font-family: Hauora, monospace !important;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;

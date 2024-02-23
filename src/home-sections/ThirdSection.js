@@ -151,7 +151,7 @@ const Title = styled.h1`
   font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
   text-transform: capitalize;
-  text-shadow: 1px 1px 0px #333,
+  /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -160,10 +160,10 @@ const Title = styled.h1`
                  3px 3px 0px #333,
                  4px 4px 0px #333,
                  4px 4px 0px #333,
-                5px 5px 0px #333;
+                5px 5px 0px #333; */
   color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
+  font-family: Hauora, monospace !important;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
 
   @media screen and (max-width: 1120px) {
     font-size: calc(2.4em + 1vw); /* Adjust font size for smaller screens */
@@ -173,16 +173,16 @@ const Title = styled.h1`
   }
 `;
 const Text = styled.p`
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+ font-family: Hauora, monospace !important;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;
   text-transform: capitalize;
   text-transform: 0 0 4px #fff;
  
-  color: #A8A8A8;
+  color: #B0B0B0;
   font-family: 'Times Roman';
-  text-shadow: 1px 1px 0px #333,
+  /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -191,8 +191,8 @@ line-height: 1.8;
                  2px 2px 0px #333,
                  2px 2px 0px #333,
                  1px 1px 0px #333,
-                2px 2px 0px #333;
-  /* filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3)); */
+                2px 2px 0px #333; */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
               
   @media screen and (max-width: 1120px) {
     font-size: calc(0.8em + 1vw);
@@ -204,11 +204,11 @@ line-height: 1.8;
 
 
 const Button = styled.button`
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Hauora, monospace;
   font-weight: 600;
   padding: 0.8rem 2rem 0.8rem 2rem;
   font-size: calc(0.4em + 1vw);
-  border: 1px solid #fff;
+  border: none;
   background-color: #007fff;
   color: #fff;
   border-radius: 0.3rem;

@@ -22,7 +22,7 @@
 
 .description {
   color: white !important;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Tenor Sans", sans-serif;
   font-size: 1.2rem !important;
   max-width: rem(300px);
 
@@ -36,7 +36,7 @@
   padding: var(--mantine-spacing-xl);
   border-radius: var(--mantine-radius-md);
   box-shadow: var(--mantine-shadow-lg);
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: "Tenor Sans", sans-serif;
 }
 
 .social {
@@ -54,7 +54,7 @@
 
   &::placeholder {
     color: var(--mantine-color-gray-5);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Tenor Sans", sans-serif ;
     font-size: 1.1rem;
   }
 }
@@ -67,4 +67,5 @@
 .control {
   background-color: var(--mantine-color-blue-6);
   font-size: 1.1rem !important;
+  font-family: "Tenor Sans", sans-serif;
 }

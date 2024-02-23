@@ -93,7 +93,7 @@ const V1 = styled.img`
 
 const TextContainer = styled.div`
   width: 40%;
-  height: 100%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +126,7 @@ const Title = styled.h1`
                  4px 4px 0px #333,
                 5px 5px 0px #333; */
   color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Hauora, monospace !important;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
 
   @media screen and (max-width: 1120px) {
@@ -139,15 +139,14 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+font-family: Hauora, monospace !important;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;
   text-transform: capitalize;
   text-transform: 0 0 4px #fff;
  
-  color: 	#A8A8A8;
-  font-family: 'Times Roman';
+  color: 	#B0B0B0;
   /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -169,34 +168,37 @@ line-height: 1.8;
 `;
 
 const Button = styled.button`
- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Hauora, monospace;
   font-weight: 600;
-  height: 5em;
-  margin-bottom: auto;
-  width: 5em;
-  font-size: calc(0.6em + 1vw);
-  border:none;
-  background-color: white;
-  color: #333;
-  border-radius: 50%;
+  padding: 0.8rem 2rem 0.8rem 2rem;
+  font-size: calc(0.4em + 1vw);
+  border: none;
+  background-color: #007fff;
+  color: #fff;
+  border-radius: 0.3rem;
   position: relative;
-  box-shadow: 0 0 20px 10px rgba(0,115,207,0.3);
   overflow: hidden;
-  transition: box-shadow 0.3s ease; 
+  transition: color 0.3s ease;
+  align-self: center;
+  margin: 1.3rem 2rem 0 0;
+
   &:hover {
-    background-color: transparent;
-    color: #fff;
     cursor: pointer;
-    box-shadow: 0 0 20px 10px rgba(0,115,207,0.6);
+    background-color: transparent;
+    border:1px solid #007fff;
+    color: #fff;
+    box-shadow: 0 0 20px 10px rgba(0,115,207,0.2);
   }
+
   @media screen and (max-width: 1120px) {
     font-size: calc(0.8em + 1vw);
   }
+
   @media screen and (max-width: 625px) {
-    font-size: calc(0.5em + 1vw);
+    font-size: calc(0.4em + 1vw);
+    padding: 0.8rem 2rem 0.8rem 2rem;
   }
 `;
-
 const MarqueeH1 = styled.h1`
  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -342,7 +344,7 @@ const SeventhSection = () => {
       <Title>Connect with Confidence</Title>
       <Text> Explore the Secure Feature Set of TagSocial. Have a question? Explore our FAQ for assistance.
 </Text>
-        <Button>FAQs</Button>
+        <Button>FAQ</Button>
       </TextContainer>
       
     </Section>

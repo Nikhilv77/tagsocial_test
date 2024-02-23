@@ -116,7 +116,7 @@ const TextContainer = styled.div`
   padding: 2rem;
   flex-direction: column;
   align-items: center;
- justify-content:space-around;
+ justify-content:center;
   position: absolute;
   gap: 1rem;
   top: 10%;
@@ -325,7 +325,7 @@ const ThirdSection = () => {
     <div
   style={{ backgroundColor: '#181818', padding: '10px', border:'none' }}
      >
-    <Marquee speed={200} direction="right" style={{ zIndex:'999', transform: "rotate(-8deg)" }}>
+    <Marquee speed={200} direction="right" style={{ zIndex:'99', transform: "rotate(-8deg)" }}>
   <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
     Enjoy Awesome Features. Get To Know Amazing People.
   </MarqueeH1>

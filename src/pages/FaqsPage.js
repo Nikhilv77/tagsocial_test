@@ -9,14 +9,14 @@ const FaqsPage = () => {
   const theme = createTheme({
  
   });
-  // useEffect(()=>{
-  //   (
-  //     async()=>{
-  //       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-  //       const locomotiveScroll = new LocomotiveScroll();
-  //     }
-  //   )()
-  // },[])
+  useEffect(()=>{
+    (
+      async()=>{
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
+  },[])
   
   return <div style={{backgroundColor:'#181818'}}>
   <FAQFeaturesPrivacyNav/>

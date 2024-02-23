@@ -86,9 +86,9 @@ opacity: 0.5;
 const Home = () => {
 
   return <Section>
-  <Blur1/>
+  {/* <Blur1/>
   <Blur2/>
-  <Blur3/>
+  <Blur3/> */}
  <Header/>
     <HeaderVideo/>
   </Section>;

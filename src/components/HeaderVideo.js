@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {motion} from 'framer-motion'
 import HeroImage from '../assets/Images/hero-image.png'
-import ctaImage1 from '../assets/Images/google-play.png'
-import ctaImage2 from '../assets/Images/app-store.png'
+
 import { VideoComp } from "./videoComp";
 import Marquee from "react-fast-marquee";
 
@@ -17,15 +16,19 @@ height: 0;
   justify-content: center;
   align-items: center;
   color: ${props=>props.theme.text}; 
+
+
   div{
     display: flex;
     flex-direction: row;
     padding: 0.5rem;
   }
   h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Hauora, monospace;
+    text-align: center;
+    line-height:1.3;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
-    font-size: clamp(3em, 5.3em, 5.3em);
+    font-size: clamp(1.5em, 3em, 3em) !important;
     /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -40,12 +43,12 @@ height: 0;
 
     user-select: none;
  @media (max-width:768px){
-  font-size: 2.9em;
+  font-size: 2em;
  }
   }
 
   h2{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family: Hauora, monospace;
     /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -57,11 +60,12 @@ height: 0;
                  3px 3px 0px #333,
                 4px 4px 0px #333 !important; */
   
-    font-weight: 300;
+    font-weight: 400;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
-    font-size: clamp(1.3em, 2em, 2em);
+    font-size: clamp(1.1em, 1.4em, 1.4em);
     text-transform: capitalize;
     user-select: none;
+    color: #B0B0B0;
     text-align:center;
     width:60%;
     display: flex;
@@ -70,23 +74,11 @@ height: 0;
     align-items: center;
 padding: 0.5rem;
 @media (max-width:768px){
-  font-size: 1.25em;
+  font-size: 1em;
+  width: 70%;
  }
   }
-  .cta-images{
-    display: flex;
-    gap: 1rem;
-    padding : 2em;
-    @media (max-width: 768px) {
-        flex-direction: column; /* Switch to column for screens smaller than 768px */
-      }
-  }
-  .cta-image{
-   max-width: 14rem;
-    max-height: 5rem;
-    user-select: none;
-    cursor: pointer;
-  }
+
 
   `
   const MarqueeH1 = styled(motion.h1)`
@@ -129,7 +121,7 @@ const HeaderVideo = () => {
   }
 
   return(
-    <div style={{marginTop:'11vh'}}>
+    <div style={{marginTop:'12vh'}}>
   <Title
   initial={{
     height: 0,
@@ -137,7 +129,7 @@ const HeaderVideo = () => {
   }}
   animate={{
     opacity: 1,
-    height: "30rem", 
+    height: "20rem", 
   }}
   transition={{
     delay: 2.5,
@@ -147,30 +139,21 @@ const HeaderVideo = () => {
        <motion.div
        > 
         <motion.h1
-        >TagSocial</motion.h1>
+        >Share Your World on TagSocial</motion.h1>
 
        </motion.div>
        
-       <motion.h2 >Join a vibrant community where creativity knows no bounds. 
+       <motion.h2 >Join our vibrant community of explorers, connect with like-minded individuals, & share your passions with the world.
          </motion.h2>
-       <motion.div  className="cta-images">
-        <img className="cta-image" src={ctaImage1} alt="" />
-        <img className="cta-image" src={ctaImage2} alt="" />
-       </motion.div>
+        
       </Title>
      
-    
-     <Marquee  speed={250}>
+      <Marquee  speed={250}>
      <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
-  Discover.
-</MarqueeH1>
-<MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
-  Connect.
-</MarqueeH1>
-<MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
-  Share.
+  Discover. Connect. Share
 </MarqueeH1>
 </Marquee>
+   
 
       <VideoComp/>
    

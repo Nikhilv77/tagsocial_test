@@ -38,13 +38,13 @@ const Icon = styled(Box)`
 const Title = styled(Text)`
   color: var(--mantine-color-blue-0);
   font-size: 1.1rem !important;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Tenor Sans", sans-serif;
 `;
 
 const Description = styled(Text)`
   color: var(--mantine-color-white);
   font-size: 1.1rem !important;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Tenor Sans", sans-serif;
 `;
 
 // Function to generate icon elements

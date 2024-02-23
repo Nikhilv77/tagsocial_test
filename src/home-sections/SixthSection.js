@@ -77,8 +77,8 @@ opacity: 0.5;
 `
 const V1 = styled.img`
   position: absolute;
-  top: -70%;
-  right: 2%;
+  bottom: -70%;
+  left: 2%;
   width: 54%;
   height: 54vh;
   object-fit: contain;
@@ -126,7 +126,7 @@ const Title = styled.h1`
                  4px 4px 0px #333,
                 5px 5px 0px #333; */
   color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: Hauora, monospace !important;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
 
   @media screen and (max-width: 1120px) {
@@ -139,15 +139,15 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+font-family: Hauora, monospace !important;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;
   text-transform: capitalize;
   text-transform: 0 0 4px #fff;
  
-  color: 	#A8A8A8;
-  font-family: 'Times Roman';
+  color: 	#B0B0B0;
+  font-family: Hauora, monospace  !important;
   /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -257,7 +257,7 @@ const SeventhSection = () => {
         scrub: 2,
       },
     })
-    .to(video1Elem, { scale: 1, top:"30%",left:"1%" ,zIndex:5,rotation:360,scale:1.2},)
+    .to(video1Elem, { scale: 1, bottom:"15%",left:"3%" ,zIndex:5,scale:1.4},)
   
 
     subElements("h1").forEach((el) =>

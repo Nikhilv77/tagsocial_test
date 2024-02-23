@@ -9,11 +9,11 @@ const faqStyles = {
     paddingTop: 'calc(var(--mantine-spacing-xl) * 4)',
     paddingBottom: 'calc(var(--mantine-spacing-xl) * 2)',
     minHeight: '650px',
-    fontFamily: "'Times New Roman', Times, serif",
+    fontFamily: "Tenor Sans, sans-serif",
   },
   title: {
     marginBottom: 'calc(var(--mantine-spacing-xl) * 1.5)',
-    fontFamily: "'Times New Roman', Times, serif",
+    fontFamily: "Tenor Sans, sans-serif",
     color: '#fff',
   },
   item: {

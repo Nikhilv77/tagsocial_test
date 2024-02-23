@@ -5,20 +5,22 @@ import styled,{keyframes} from "styled-components";
 import logo from "../assets/Images/Logo.png";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
+import ctaImage1 from '../assets/Images/Frame 66.png'
+import ctaImage2 from '../assets/Images/Frame 65.png'
 gsap.registerPlugin(ScrollTrigger);
 
 const Headers = styled(motion.header)`
   display: flex;
-  height: 11vh;
   justify-content: space-between;
   align-items: center;
-  /* background: rgba(24, 24, 24, 0.5);  */
-  background:linear-gradient(135deg, rgba(43, 43, 42, 0.6), rgba(93, 93, 93, 0.6), rgba(34, 34, 33, 0.6));
+  background: rgba(24, 24, 24, 0.5); 
+  /* background:linear-gradient(135deg, rgba(43, 43, 42, 0.6), rgba(93, 93, 93, 0.6), rgba(34, 34, 33, 0.6)); */
   backdrop-filter: blur(16px) !important; 
   color: white;
   position: fixed;
   z-index: 3;
   width: 100vw;
+  height: 5.2rem;
 `;
 
 const Logo = styled.a`
@@ -28,19 +30,23 @@ const Logo = styled.a`
   height: auto;
   cursor: pointer;
   img{
- width: 3.4rem;
+ width: 3rem;
  margin-left: 2rem;
- height: 3.4rem;
+ height: 3rem;
  filter: brightness(0) invert(1) grayscale(1);
  user-select: none;
- 
+ @media screen and (max-width:1117px) {
+  width: 2.8rem;
+  height: 2.8rem;
+ }
 }
 `;
 
 const Nav = styled.nav`
 width: 70%;
-
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+font-family: "Tenor Sans", sans-serif;
+  
+font-weight: 300;
  display: flex;
  align-items: center;
  justify-content:space-between;
@@ -55,10 +61,13 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .no-hover:hover::after {
   width: 0; /* Set width to 0 on hover to disable the hover effect */
 }
+
+  
   a {
-    font-weight: 600;
+    font-weight: 400 !important;
+    
     line-height: 1.5;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: white;
     &::after {
       content: "";
@@ -82,7 +91,6 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
     } */
   }
 `;
-
 const coolEffectAnimation = keyframes`
   0% {
 
@@ -90,7 +98,7 @@ const coolEffectAnimation = keyframes`
   }
   50% {
    
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(30deg);
   }
   100% {
 
@@ -99,7 +107,9 @@ const coolEffectAnimation = keyframes`
 `;
 
 const Button = styled.button`
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+ font-family: "Tenor Sans", sans-serif;
+
+font-weight: 600 !important;
   user-select: none;
   display: flex;
   align-items: center;
@@ -112,7 +122,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   border-radius: 0.2rem; /* Set border-radius to a high value */
   font-size: 1.2rem;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   transition: height 0.2s, transform 0.2s;
   &:hover{
@@ -132,6 +142,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   }
 `;
 
+
 const HamburgerBtn = styled.button`
   display: none;
   @media only screen and (max-width: 1117px) {
@@ -141,13 +152,12 @@ const HamburgerBtn = styled.button`
   margin-right: 1.5rem;
   background-color: transparent;
   color: white;
-  width: 2.4rem;
-  height: 11px;
+  width: 2.2rem;
+  height: 8px;
   border: none;
   margin-top: 0rem;
   transition: transform 0.3s, background-color 0.3s;
   cursor: pointer;
-
 
 
   &::before,
@@ -176,12 +186,13 @@ const HamburgerBtn = styled.button`
 
 const MobileMenu = styled.nav`
   display: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
-
+  margin-right: 0.5rem;
   @media only Screen and (max-width: 1117px) {
     display: flex;
   }
   flex-direction: column;
+  font-family: "Tenor Sans", sans-serif;
+
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
@@ -191,18 +202,18 @@ const MobileMenu = styled.nav`
   right: 0;
   visibility: ${(props) => (props.clicked ? "visible" : "hidden")};
 
-  z-index: 10;
+  z-index: 999 !important;
   background: rgba(24, 24, 24, 0.98);
   backdrop-filter: blur(7px) !important; 
   border-radius:1rem; /* Adjust the alpha value (0.7) for opacity */ /* Adds a blur effect for glass-like appearance */
   margin: 0.5rem;
   a {
     color: white;
-    font-weight: 600;
+    font-weight:400 !important;
     font-size: 1.3rem;
     margin: 1.5rem;
     cursor: pointer;
-    
+  
   }
 `;
 
@@ -212,8 +223,10 @@ export const FAQFeaturesPrivacyNav = () => {
   const ref = useRef(null);
 
 
-  useEffect(() => {
+
+  useEffect(() => { 
     const header = ref.current;
+
 
     // ScrollTrigger setup
     ScrollTrigger.create({
@@ -226,16 +239,21 @@ export const FAQFeaturesPrivacyNav = () => {
         // Toggle visibility based on scroll direction
         if (direction === "up") {
           gsap.to(header, { top: 0 });
+          
         } else {
           gsap.to(header, { top: "-100%" });
+        
         }
       }
     });
   }, []);
 
+
   return (
+    <>
 
     <Headers 
+   
     ref={ref}>
       <Logo>
         <img src={logo} alt="TagSocial" />
@@ -248,9 +266,9 @@ export const FAQFeaturesPrivacyNav = () => {
           width:'60%',
     
         }}>
-           <a href="/">Home</a>
+       <a href="/">Home</a>
 <a href="/features">Features</a>
-<a href="/faqs">FAQs</a>
+<a href="/faqs">Faqs</a>
 <a href="/terms-and-conditions">Privacy Policy</a>
         </div>
         <a href="https://play.google.com/store/apps/details?id=com.syneidisi.tagsocial" target="_blank" class="no-hover">
@@ -273,5 +291,7 @@ export const FAQFeaturesPrivacyNav = () => {
       </MobileMenu>
     </Headers>
   
+
+    </>
   );
 };
