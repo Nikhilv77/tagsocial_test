@@ -101,67 +101,109 @@ object-fit: contain;
 `;
 
 const TitleContainer = styled.div`
-  width: 50%;
+  width: 35%;
   height: 100%;
+  padding: 0.3rem;
+  gap: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+z-index: 999;
   position: absolute;
-  top: 0;
+  top: 5%;
   right: 0;
 
-  & > *:nth-child(2) {
-    margin-left: 6rem;
-  }
-  & > *:nth-child(3) {
-    margin-left: 12rem;
-  }
 
-  @media screen and (max-width: 48em) {
-    top: 60%;
-    right: 2rem;
+  @media screen and (max-width: 768px) {
+    top: 30%;
+    width: 50%;
+    right: 5%;
   }
-  @media screen and (max-width: 40em) {
-    right: 5rem;
+  @media screen and (max-width: 640px) {
+
+    width: 60%;
   }
-  @media screen and (max-width: 30em) {
-    top: 70%;
-    right: 40%;
+  @media screen and (max-width: 480px) {
+    top: 34%;
+    width: 70%;
+
   }
 `;
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 2.9rem;
   font-family: Hauora, monospace;
   z-index: 5;
+  text-shadow: 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 2px 2px 0px #333,
+                 3px 3px 0px #333,
+                 3px 3px 0px #333,
+                 4px 4px 0px #333,
+                 4px 4px 0px #333,
+                5px 5px 0px #333;
   text-transform: capitalize;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.2));
 
-  @media screen and (max-width: 70em) {
-    font-size: 1.7rem;
+  @media screen and (max-width: 768px) {
+  
+    font-size: 2.3rem;
+
   }
-  @media screen and (max-width: 48em) {
-    font-size: 1.4rem;
+  @media screen and (max-width: 640px) {
+    font-size: 2.1rem;
+ 
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
   }
 `;
 const SubTitle = styled.p`
-  font-size: 1.5rem;
-  font-family: Hauora, monospace;
+  text-shadow: 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 2px 2px 0px #333,
+                 2px 2px 0px #333,
+                 2px 2px 0px #333,
+                 1px 1px 0px #333,
+                2px 2px 0px #333;
+              
+   
+  z-index: 999;
+  font-size: 1.8rem;
+  color: #989898;
+  font-weight: 500;
+  font-family: Hauora, monospace !important;
   z-index: 5;
   text-transform: capitalize;
 
-  @media screen and (max-width: 70em) {
-    font-size: 1.4rem;
-  }
-  @media screen and (max-width: 48em) {
-    font-size: 1.2rem;
-  }
+  @media screen and (max-width: 768px) {
+  
+  font-size: 1.8rem;
+
+}
+@media screen and (max-width: 640px) {
+  font-size: 1.4rem;
+
+}
+@media screen and (max-width: 480px) {
+  font-size: 1.4rem;
+}
+
 `;
 const Button = styled.button`
+ display: flex;
+ flex-direction: column;
+ align-items: center;
   font-family: Hauora, monospace;
   font-weight: 600;
+  z-index: 999;
   padding: 0.8rem 2rem 0.8rem 2rem;
-  font-size: calc(0.4em + 1vw);
+  font-size: 1.7rem;
   border: none;
   background-color: #007fff;
   color: #fff;
@@ -170,26 +212,27 @@ const Button = styled.button`
   overflow: hidden;
   transition: color 0.3s ease;
   align-self: center;
-  margin: 1.3rem 0 0 0;
-
-
+  margin: 1.5rem 0 0 0;
 
   &:hover {
     cursor: pointer;
     background-color: transparent;
     border:1px solid #007fff;
     color: #fff;
-    box-shadow: 0 0 20px 10px rgba(0,115,207,0.2);
   }
 
-  @media screen and (max-width: 1120px) {
-    font-size: calc(0.8em + 1vw);
-  }
+  @media screen and (max-width: 768px) {
+  
+  font-size: 1.7rem;
 
-  @media screen and (max-width: 625px) {
-    font-size: calc(0.4em + 1vw);
-    padding: 0.8rem 2rem 0.8rem 2rem;
-  }
+}
+@media screen and (max-width: 640px) {
+  font-size: 1.6rem;
+
+}
+@media screen and (max-width: 480px) {
+  font-size: 1.5rem;
+}
 `;
 
 const CameraSection = () => {
@@ -231,7 +274,7 @@ const CameraSection = () => {
         },
       })
       .to(video1Elem, { scale: 0.3,opacity:0,rotation:-15 }, "key1")
-      .to(video2Elem, { scale: 1,rotation:15,left:'20%',top:0 }, "key1");
+      .to(video2Elem, { scale: 1,rotation:15,left:'20%',top:"5%" }, "key1");
 
     elements("h1,p,button").forEach((el) =>
       t2.fromTo(
@@ -270,9 +313,14 @@ const CameraSection = () => {
       <V1 ref={videoRef1} src={v1}  />
       <V2 ref={videoRef2} src={v2}  />
       <TitleContainer ref={titleRef}>
-        <Title>Give Some Life <br />To Your Social <br />Experience</Title>
-        <SubTitle>We brought Features you wanna see.</SubTitle>
+        <Title>Give Some Life To Your Social Experience</Title>
+        <SubTitle>
+          <span>
+          Explore TagSocial's exciting features and dive into a world of possibilities
+          </span>
         <Button>Checkout</Button>
+        </SubTitle>
+       
       </TitleContainer>
     </Section>
   );
