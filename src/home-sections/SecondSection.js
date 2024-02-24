@@ -79,18 +79,22 @@ const V1 = styled.img`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  height: 95vh;
+  margin: auto;
   object-fit: cover;
   object-position: bottom;
   z-index: 2;
+  transform: rotate(-4deg);
 `;
 
 const V2 = styled.img`
   position: absolute;
   top: -40%;
 
-  left: -45%;
+  left: -60%;
   width: 60%;
   height: 80vh;
 object-fit: contain;
@@ -274,8 +278,8 @@ const CameraSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { scale: 0.3,opacity:0,rotation:-15 }, "key1")
-      .to(video2Elem, { scale: 1,rotation:15,left:'20%',top:"5%" }, "key1");
+      .to(video1Elem, { scale: 0.3,rotation:-15,left:"-10%",opacity:0 }, "key1")
+      .to(video2Elem, { scale: 1,rotation:15,left:'20%',top:"5%" },"key1");
 
     elements("h1,p,button").forEach((el) =>
       t2.fromTo(
