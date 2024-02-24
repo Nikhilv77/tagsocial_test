@@ -123,8 +123,8 @@ const V4 = styled.img`
   right: -20%;
   user-select: none;
   bottom: -7%;
-  width: 60%;
-  height: 40vh;
+  width: 56%;
+  height: 36vh;
   object-fit: contain;
   transform: rotate(-17deg);
   object-position: bottom;
