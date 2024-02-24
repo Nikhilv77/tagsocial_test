@@ -9,10 +9,11 @@ import Marquee from "react-fast-marquee";
 
 const Section = styled.section`
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
   background-color: var(--white);
+  background-color: #181818;
   overflow: hidden;
 `;
 const Blur1 = styled.div`
