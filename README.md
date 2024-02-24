@@ -23,8 +23,9 @@ To run the TagSocial website locally on your machine, follow these steps:
 
 4. Open your web browser and navigate to `http://localhost:3000` to view the TagSocial website locally.
 
-## Developers and Designers
-Designer: Yash Pokhriyal
-Developer: Nikhil Verma
+## Designers
+  Yash Pokhriyal
+## Developers
+  Nikhil Verma
 
 

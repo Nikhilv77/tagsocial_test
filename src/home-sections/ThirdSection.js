@@ -154,7 +154,7 @@ const TextContainer = styled.div`
 
 const Title = styled.h1`
   font-size: calc(3.3em + 1vw); /* Adjust the font size based on viewport width */
-  z-index: 5;
+  z-index: 101;
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -181,7 +181,7 @@ const Text = styled.p`
  font-family: Hauora, monospace !important;
 font-size: calc(1.2em + 1vw);
 line-height: 1.8;
-  z-index: 5;
+  z-index: 101;
   text-transform: capitalize;
   text-transform: 0 0 4px #fff;
  
