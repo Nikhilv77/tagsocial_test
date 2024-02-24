@@ -7,7 +7,6 @@ import styled,{keyframes} from "styled-components";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import thirdSectionImg1 from '../assets/Images/features/section-1-1.png'
 import thirdSectionImg2 from '../assets/Images/features/section-1-2.png'
-
 import Marquee from "react-fast-marquee";
 const Section = styled.section`
   width: 100vw;
@@ -82,11 +81,11 @@ opacity: 0.5;
 const V1 = styled.img`
   position: absolute;
   top: 0;
-  left:-90%; /* initial position */
-  width: 70%; /* Set initial width as a percentage of viewport width */
- /* Ensure the image doesn't exceed its container's width */
+  right:-100%; /* initial position */
+  width: 80%; /* Set initial width as a percentage of viewport width */
+/* Ensure the image doesn't exceed its container's width */
   
-  height: 70vh;
+  height: 79vh;
   object-fit: contain;
   object-position: bottom;
   z-index: 1;
@@ -97,11 +96,12 @@ const V1 = styled.img`
 const V2 = styled.img`
 
   position: absolute;
-  right: -90%;
+  left: -100%;
+  top: 0%;
   top: 0;
   width: 80%; /* Set initial width as a percentage of viewport width */
- /* Ensure the image doesn't exceed its container's width */
-  height: 80vh;
+/* Ensure the image doesn't exceed its container's width */
+  height: 79vh;
   object-fit: contain;
   object-position: bottom;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
@@ -109,20 +109,18 @@ const V2 = styled.img`
 `;
 
 
-
 const TextContainer = styled.div`
-  width: 60%;
+  width: 50%;
   height: 100%;
   display: flex;
   padding: 2rem;
- 
   flex-direction: column;
   align-items: center;
- justify-content:space-around;
+ justify-content:center;
   position: absolute;
   gap: 1rem;
   top: 10%;
-  left: 15%;
+  left: 25%;
   right: 25%;
 
 @media screen and (max-width:520px){
@@ -137,6 +135,7 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
+  font-family: Hauora, monospace;
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -149,20 +148,19 @@ const Title = styled.h1`
                  4px 4px 0px #333,
                 5px 5px 0px #333;
   color: #fff;
-  font-family: Hauora, monospace;
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
 
   @media screen and (max-width: 1120px) {
    /* Adjust font size for smaller screens */
    font-size: calc(2.3em + 1vw);
   }
   @media screen and (max-width: 625px) {
-    font-size: calc(1.9em + 1vw); /* Adjust font size for even smaller screens */
+    font-size: calc(1.7em + 1vw); /* Adjust font size for even smaller screens */
   }
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: Hauora, monospace !important;
+font-family: Hauora, monospace;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;
@@ -170,7 +168,7 @@ line-height: 1.8;
   text-transform: 0 0 4px #fff;
  
   color: 	#A8A8A8;
-  
+  font-family: 'Times Roman';
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -184,10 +182,10 @@ line-height: 1.8;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
               
   @media screen and (max-width: 1120px) {
-    font-size: calc(0.9em + 1vw);
+    font-size: calc(0.8em + 1vw);
   }
   @media screen and (max-width: 625px) {
-    font-size: calc(0.8em + 1vw);
+    font-size: calc(0.7em + 1vw);
   }
 `;
 
@@ -216,7 +214,7 @@ background-color: #383838;
 
 
 
-const FirstSection = () => {
+const ThirdSection = () => {
   console.log("logged second");
   
   gsap.registerPlugin(ScrollTrigger);
@@ -255,8 +253,8 @@ const FirstSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { left: "-10%", top:0, scale: 1 },"key1")
-      .to(video2Elem, { right: "-10%", top:0, scale: 1 },"key1")
+      .to(video1Elem, { right: "-20%", top:0, scale: 1},"key1")
+      .to(video2Elem, { left: "-20%", top:0, scale: 1},"key1")
       ;
 
       subElements("h1").forEach((el) =>
@@ -314,22 +312,20 @@ const FirstSection = () => {
       <Blur2/>
       <Blur3/>
       <TextContainer ref={textRef}>
-      <Title>Location based feed
+      <Title>Do more with with Location based feed
 </Title>
-      <Text> 
-Begin an engaging adventure with Tags Social! We connect you with like-minded individuals in exciting new locations, creating meaningful connections and unforgettable experiences.
+      <Text> Embark on a journey of discovery, as Tags Social connects you with like-minded individuals at new locations. 
 </Text>
       </TextContainer>
       <V1 ref={videoRef1} src={thirdSectionImg1}  />
       <V2 ref={videoRef2} src={thirdSectionImg2}   />
-
       
     </Section>
    
     <div
   style={{ backgroundColor: '#181818', padding: '10px', border:'none' }}
      >
-    <Marquee speed={200} direction="right" style={{ zIndex:'5', transform: "rotate(-8deg)" }}>
+    <Marquee speed={200} direction="right" style={{ zIndex:'99', transform: "rotate(-8deg)" }}>
   <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
     Enjoy Awesome Features. Get To Know Amazing People.
   </MarqueeH1>
@@ -339,4 +335,4 @@ Begin an engaging adventure with Tags Social! We connect you with like-minded in
   );
 };
 
-export default FirstSection;
+export default ThirdSection;

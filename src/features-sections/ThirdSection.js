@@ -82,8 +82,8 @@ const V1 = styled.img`
   position: absolute;
   top: 0;
   right:-100%; /* initial position */
-  width: 40vw; /* Set initial width as a percentage of viewport width */
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  width: 80%; /* Set initial width as a percentage of viewport width */
+/* Ensure the image doesn't exceed its container's width */
   
   height: 79vh;
   object-fit: contain;
@@ -99,8 +99,8 @@ const V2 = styled.img`
   right: -50%;
   top: 0%;
   top: 0;
-  width: 40vw; /* Set initial width as a percentage of viewport width */
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  width: 80%; /* Set initial width as a percentage of viewport width */
+/* Ensure the image doesn't exceed its container's width */
   height: 79vh;
   object-fit: contain;
   object-position: bottom;
@@ -135,8 +135,9 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
+  font-family: Hauora, monospace;
   text-transform: capitalize;
-  /* text-shadow: 1px 1px 0px #333,
+  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -145,9 +146,8 @@ const Title = styled.h1`
                  3px 3px 0px #333,
                  4px 4px 0px #333,
                  4px 4px 0px #333,
-                5px 5px 0px #333; */
+                5px 5px 0px #333;
   color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
 
   @media screen and (max-width: 1120px) {
@@ -160,7 +160,7 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+font-family: Hauora, monospace;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;
@@ -169,7 +169,7 @@ line-height: 1.8;
  
   color: 	#A8A8A8;
   font-family: 'Times Roman';
-  /* text-shadow: 1px 1px 0px #333,
+  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -178,7 +178,7 @@ line-height: 1.8;
                  2px 2px 0px #333,
                  2px 2px 0px #333,
                  1px 1px 0px #333,
-                2px 2px 0px #333; */
+                2px 2px 0px #333;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
               
   @media screen and (max-width: 1120px) {
@@ -253,8 +253,8 @@ const ThirdSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { left: 0, top:0, scale: 1},"key1")
-      .to(video2Elem, { right: 0, top:0, scale: 1},"key1")
+      .to(video1Elem, { left: "-20%", top:0, scale: 1},"key1")
+      .to(video2Elem, { right: "-20%", top:0, scale: 1},"key1")
       ;
 
       subElements("h1").forEach((el) =>

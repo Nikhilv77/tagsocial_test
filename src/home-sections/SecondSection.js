@@ -139,6 +139,7 @@ const Title = styled.h1`
   font-size: 3.6rem;
   font-family: Hauora, monospace;
   z-index: 5;
+  color: #fff;
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,

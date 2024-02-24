@@ -30,26 +30,34 @@ const BottomHeader = styled(motion.header)`
   border-radius: 1.5rem;
   background: rgba(24, 24, 24, 0.3); 
   border: 1px solid grey;
-  padding: 0.5rem 0.7rem 0.8rem 0.7rem;
+  padding: 0.3rem 0.4rem 0.5rem 0.4rem;
   /* background:linear-gradient(135deg, rgba(43, 43, 42, 0.6), rgba(93, 93, 93, 0.6), rgba(34, 34, 33, 0.6)); */
 
   position: fixed;
   z-index: 99;
-  width: 26.5rem;
+  width: 28.5rem;
   bottom: 5%; /* Position the element at the bottom of the viewport */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center horizontally */
   @media screen and (max-width:600px) {
-      width: 23rem;
-      height: 5.4rem
+      width: 26rem;
+      height: 5.7rem
+    }
+    @media screen and (max-width:472px) {
+      width: 25rem;
+      height: 5.6rem
     }
     @media screen and (max-width:415px) {
-      width: 19rem;
-      height: 5rem;
+      width: 24rem;
+      height: 5.4rem;
+    }
+    @media screen and (max-width:400px) {
+      width: 21.8rem;
+      height: 5.3rem;
     }
   img{
     height: 100%;
-    opacity: 0.8;
+    opacity: 1;
     width: 50%;
     cursor: pointer;
   

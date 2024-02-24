@@ -80,10 +80,10 @@ opacity: 0.5;
 `
 const V1 = styled.img`
   position: absolute;
-  bottom: -50%;
-  left:-50%; /* initial position */
-  width: 40vw; /* Set initial width as a percentage of viewport width */
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  top: 0;
+  right:-100%; /* initial position */
+  width: 80%; /* Set initial width as a percentage of viewport width */
+/* Ensure the image doesn't exceed its container's width */
   
   height: 79vh;
   object-fit: contain;
@@ -91,14 +91,16 @@ const V1 = styled.img`
   z-index: 1;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
 `;
+
+
 const V2 = styled.img`
 
   position: absolute;
-  right: -50%;
-  bottom: -50%;
+  left: -100%;
+  top: 0%;
   top: 0;
-  width: 40vw; /* Set initial width as a percentage of viewport width */
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  width: 80%; /* Set initial width as a percentage of viewport width */
+/* Ensure the image doesn't exceed its container's width */
   height: 79vh;
   object-fit: contain;
   object-position: bottom;
@@ -114,7 +116,7 @@ const TextContainer = styled.div`
   padding: 2rem;
   flex-direction: column;
   align-items: center;
- justify-content:space-around;
+ justify-content:center;
   position: absolute;
   gap: 1rem;
   top: 10%;
@@ -131,10 +133,11 @@ const TextContainer = styled.div`
 
 
 const Title = styled.h1`
-  font-size: calc(2.7em + 1vw); /* Adjust the font size based on viewport width */
+  font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
+  font-family: Hauora, monospace;
   text-transform: capitalize;
-  /* text-shadow: 1px 1px 0px #333,
+  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -143,10 +146,9 @@ const Title = styled.h1`
                  3px 3px 0px #333,
                  4px 4px 0px #333,
                  4px 4px 0px #333,
-                5px 5px 0px #333; */
+                5px 5px 0px #333;
   color: #fff;
-  font-family: Hauora, monospace !important;
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3)) !important;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
 
   @media screen and (max-width: 1120px) {
    /* Adjust font size for smaller screens */
@@ -158,7 +160,7 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: Hauora, monospace !important;
+font-family: Hauora, monospace;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;
@@ -166,8 +168,8 @@ line-height: 1.8;
   text-transform: 0 0 4px #fff;
  
   color: 	#A8A8A8;
-  font-family: Hauora, monospace;
-  /* text-shadow: 1px 1px 0px #333,
+  font-family: 'Times Roman';
+  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -176,7 +178,7 @@ line-height: 1.8;
                  2px 2px 0px #333,
                  2px 2px 0px #333,
                  1px 1px 0px #333,
-                2px 2px 0px #333; */
+                2px 2px 0px #333;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
               
   @media screen and (max-width: 1120px) {
@@ -212,7 +214,7 @@ background-color: #383838;
 
 
 
-const FirstSection = () => {
+const ThirdSection = () => {
   console.log("logged second");
   
   gsap.registerPlugin(ScrollTrigger);
@@ -251,8 +253,8 @@ const FirstSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { left: 0, top:0, scale: 1 },"key1")
-      .to(video2Elem, { right: 0, top:0, scale: 1 },"key1")
+      .to(video1Elem, { right: "-20%", top:0, scale: 1},"key1")
+      .to(video2Elem, { left: "-20%", top:0, scale: 1},"key1")
       ;
 
       subElements("h1").forEach((el) =>
@@ -323,7 +325,7 @@ const FirstSection = () => {
     <div
   style={{ backgroundColor: '#181818', padding: '10px', border:'none' }}
      >
-    <Marquee speed={200} direction="right" style={{ zIndex:'999', transform: "rotate(8deg)" }}>
+    <Marquee speed={200} direction="right" style={{ zIndex:'99', transform: "rotate(-8deg)" }}>
   <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
     Enjoy Awesome Features. Get To Know Amazing People.
   </MarqueeH1>
@@ -333,4 +335,4 @@ const FirstSection = () => {
   );
 };
 
-export default FirstSection;
+export default ThirdSection;
