@@ -9,6 +9,7 @@ import Marquee from "react-fast-marquee";
   const Title = styled(motion.div)`
   overflow: hidden;
 height: 0;
+transition: all 1s ease;
   z-index: 5;
   display: flex;
   margin: auto;
@@ -16,8 +17,6 @@ height: 0;
   justify-content: center;
   align-items: center;
   color: ${props=>props.theme.text}; 
-
-
   div{
     display: flex;
     flex-direction: row;
@@ -28,7 +27,7 @@ height: 0;
     text-align: center;
     line-height:1.3;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
-    font-size: clamp(1.5em, 3em, 3em) !important;
+    font-size: 3.2em;
     /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -42,8 +41,17 @@ height: 0;
   */
 
     user-select: none;
- @media (max-width:768px){
-  font-size: 2em;
+ @media (max-width:800px){
+  font-size: 2.7em;
+ }
+ @media (max-width:600px){
+  font-size: 2.5em;
+ }
+ @media (max-width:500px){
+  font-size: 2.3em;
+ }
+ @media (max-width:400px){
+  font-size: 2.1em;
  }
   }
 
@@ -132,8 +140,8 @@ const HeaderVideo = () => {
     height: "20rem", 
   }}
   transition={{
-    delay: 2,
-    duration: 1.3,
+    delay: 2.5,
+    duration: 1.4,
   }}
 >
        <motion.div
