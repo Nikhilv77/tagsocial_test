@@ -5,6 +5,7 @@ import { useRef } from "react";
 import styled from "styled-components";
 import v1 from "../assets/Images/tgs-header-1.webp";
 import v2 from "../assets/Images/second-section-2.png";
+import Marquee from "react-fast-marquee";
 
 const Section = styled.section`
   width: 100vw;
@@ -304,8 +305,29 @@ const CameraSection = () => {
   }, []);
 
   
-
+  const MarqueeH1 = styled.h1`
+  text-shadow: 1px 1px 0px #333,
+                  1px 1px 0px #333,
+                  1px 1px 0px #333,
+                  1px 1px 0px #333,
+                  1px 1px 0px #333,
+                  2px 2px 0px #333,
+                  2px 2px 0px #333,
+                  3px 3px 0px #333,
+                  3px 3px 0px #333,
+                 4px 4px 0px #333 !important;
+ font-family: Hauora, monospace;
+ color: #fff;
+ font-size: 4.3rem;
+ background-color: #383838;
+ 
+ @media only screen and (max-width: 700px) {
+   font-size: 3rem;
+ }
+ 
+ `;
   return (
+    <>
     <Section ref={sectionRef}>
       <Blur1/>
       <Blur2/>
@@ -323,6 +345,25 @@ const CameraSection = () => {
        
       </TitleContainer>
     </Section>
+    
+    
+    <div
+    style={{ backgroundColor: '#181818' }}
+     >
+       <Marquee speed={250}>
+         <MarqueeH1
+          
+           whileHover={{
+             textShadow: "0 0 20px rgba(255, 255, 255, 0.8)",
+        
+           }}
+         >
+          Give Yourself A Good Time. Get TagSocial Now.
+         </MarqueeH1>
+
+      
+       </Marquee>
+     </div></>
   );
 };
 
