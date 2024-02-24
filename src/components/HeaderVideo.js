@@ -137,6 +137,7 @@ const HeaderVideo = () => {
   }}
 >
        <motion.div
+
        > 
         <motion.h1
         >Share Your World on TagSocial</motion.h1>
@@ -147,13 +148,27 @@ const HeaderVideo = () => {
          </motion.h2>
         
       </Title>
-     
+     <motion.div
+     style={{display:'flex',alignItems:'center',justifyContent:'center'}}
+       initial={{
+        height: 0,
+        opacity: 0, 
+      }}
+      animate={{
+        opacity: 1,
+        height:'5rem' 
+      }}
+      transition={{
+        delay: 3.5,
+        duration: 0.9,
+      }}
+     >
       <Marquee  speed={250}>
      <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
   Discover. Connect. Share
 </MarqueeH1>
 </Marquee>
-   
+   </motion.div>
 
       <VideoComp/>
    

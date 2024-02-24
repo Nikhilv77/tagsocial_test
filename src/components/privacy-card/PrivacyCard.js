@@ -123,45 +123,49 @@ const MotionContainer = styled(motion.div)`
   background-color: #181818; /* Dark background color */
   color: #fff; /* Text color */
   padding: 4em; /* Add padding for better spacing */
-  width: 80vw;
+  width: 90vw;
   margin: auto;
   @media screen and (max-width:700px){
-    width: 90vw;
+    width: 90vw !important;
+    padding: 4em 1em 4em 1em;
   }
   @media screen and (max-width:500px){
-    width: 94vw;
+    width: 94vw !important;
+    padding: 4em 1em 4em 1em;
   }
   @media screen and (max-width:420px){
-    width: 99vw;
+    width: 99vw !important;
+    padding: 4em 1em 4em 1em;
   }
 `;
 
 const MotionTitle = styled(motion.h1)`
-  font-family: "Tenor Sans", sans-serif; /* Times Roman font */
-  font-size: 1.6rem; /* Increase font size */
+  font-family: Hauora, monospace !important; /* Times Roman font */
+  font-size: 1.8rem; /* Increase font size */
   margin-bottom: 1.5rem;
 
-  text-align: center;
+  text-align: left;
   &:first-child {
     margin-top: 4rem;
     font-size: 2.4rem;
+    text-align: center;
   }
   @media screen and (max-width:700px){
-    font-size:1.3rem;
+    font-size:1.4rem;
     &:first-child {
     margin-top: 3rem;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   }
   @media screen and (max-width:500px){
-    font-size:1.2rem;
+    font-size:1.3rem;
     &:first-child {
     margin-top: 3rem;
     font-size: 2.1rem;
   }
   }
   @media screen and (max-width:420px){
-    font-size:0.9rem;
+    font-size:1.1rem;
     &:first-child {
     margin-top: 3rem;
     font-size: 1.9rem;
@@ -177,13 +181,13 @@ const MotionSubTitle = styled(motion.h2)`
   font-family: "Tenor Sans", sans-serif;
   
   @media screen and (max-width:700px){
-     font-size: 1.4rem;
+     font-size: 1.5rem;
   }
   @media screen and (max-width:700px){
-     font-size: 1.2rem;
+     font-size: 1.3rem;
   }
   @media screen and (max-width:420px){
-     font-size: 1rem;
+     font-size: 1.1rem;
   }
 `;
 
@@ -201,13 +205,13 @@ const MotionParagraph = styled(motion.p)`
   margin-bottom: 1.5rem; /* Add margin between paragraphs */
   text-align: left;
   @media screen and (max-width:700px){
-     font-size: 1.1rem;
+     font-size: 1.2rem;
   }
   @media screen and (max-width:500px){
-     font-size: 1rem;
+     font-size: 1.1rem;
   }
   @media screen and (max-width:420px){
-   font-size: 0.8rem;
+   font-size: 1rem;
   }
 `;
 

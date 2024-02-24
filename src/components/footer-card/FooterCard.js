@@ -46,8 +46,9 @@ const FooterComponent = styled(motion.footer)`
   li {
     padding: 2rem;
     font-size: 1.2rem;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: 520 !important;
+    text-transform: capitalize;
+    font-family: Hauora, monospace !important;
     cursor: pointer;
     transition: all 0.3s ease;
   
@@ -63,7 +64,8 @@ const Bottom = styled.div`
   padding: 0.5rem 0;
 
   font-size: ${(props) => props.theme.fontlg};
-  font-family: "Tenor Sans", sans-serif;
+  font-family: Hauora, monospace !important;
+  font-weight: 520 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;

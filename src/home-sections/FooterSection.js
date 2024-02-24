@@ -68,7 +68,8 @@ const FooterComponent = styled(motion.footer)`
     padding: 2rem;
     font-size: ${(props) => props.theme.fontlg};
     text-transform: capitalize;
-    font-family: "Tenor Sans", sans-serif;
+    font-family: Hauora, monospace;
+  font-weight: 520 !important;
     cursor: pointer;
     transition: all 0.3s ease;
     &:hover {
@@ -86,7 +87,8 @@ const Bottom = styled.div`
   padding: 0.5rem 0;
   margin: 0 4rem;
   font-size: ${(props) => props.theme.fontlg};
-  font-family: "Tenor Sans", sans-serif;
+  font-family: Hauora, monospace;
+  font-weight: 520 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -178,7 +180,7 @@ const Footer = () => {
         <span
         style={{display:'flex',alignItems:'center', justifyContent:'center'}}
           >
-       MADE IN INDIA
+       Made In India
           </span>
           
           <span

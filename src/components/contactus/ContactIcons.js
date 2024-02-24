@@ -39,12 +39,18 @@ const Title = styled(Text)`
   color: var(--mantine-color-blue-0);
   font-size: 1.1rem !important;
   font-family: "Tenor Sans", sans-serif;
+  @media screen and (max-width:720px){
+    font-size: 1rem !important;
+  }
 `;
 
 const Description = styled(Text)`
   color: var(--mantine-color-white);
   font-size: 1.1rem !important;
   font-family: "Tenor Sans", sans-serif;
+  @media screen and (max-width:720px){
+    font-size: 1rem !important;
+  }
 `;
 
 // Function to generate icon elements

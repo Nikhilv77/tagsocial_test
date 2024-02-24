@@ -76,9 +76,9 @@ const Logo = styled.a`
 
 const Nav = styled.nav`
 width: 70%;
-font-family: "Tenor Sans", sans-serif;
+font-family: Hauora, monospace;
+  font-weight: 520 !important;
   
-font-weight: 300;
  display: flex;
  align-items: center;
  justify-content:space-between;
@@ -96,10 +96,10 @@ font-weight: 300;
 
   
   a {
-    font-weight: 400 !important;
-    
     line-height: 1.5;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-family: Hauora, monospace;
+  font-weight: 520 !important;
     color: white;
     &::after {
       content: "";
@@ -139,7 +139,8 @@ const coolEffectAnimation = keyframes`
 `;
 
 const Button = styled.button`
- font-family: "Tenor Sans", sans-serif;
+  font-family: Hauora, monospace;
+
 
 font-weight: 600 !important;
   user-select: none;
@@ -184,8 +185,8 @@ const HamburgerBtn = styled.button`
   margin-right: 1.5rem;
   background-color: transparent;
   color: white;
-  width: 2.2rem;
-  height: 8px;
+  width: 2rem;
+  height: 6px;
   border: none;
   margin-top: 0rem;
   transition: transform 0.3s, background-color 0.3s;
@@ -223,8 +224,8 @@ const MobileMenu = styled.nav`
     display: flex;
   }
   flex-direction: column;
-  font-family: "Tenor Sans", sans-serif;
-
+  font-family: Hauora, monospace;
+  font-weight: 520 !important;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
@@ -241,10 +242,11 @@ const MobileMenu = styled.nav`
   margin: 0.5rem;
   a {
     color: white;
-    font-weight:400 !important;
     font-size: 1.3rem;
     margin: 1.5rem;
     cursor: pointer;
+    font-family: Hauora, monospace;
+  font-weight: 520 !important;
   
   }
 `;

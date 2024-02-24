@@ -1,6 +1,6 @@
 .wrapper {
   min-height: rem(400px);
-  width: 78.5vw;
+  width: 80vw;
   margin: auto;
   background: linear-gradient(to right, rgba(0,126,242,1), rgb(3, 86, 159));
   border-radius: var(--mantine-radius-md);
@@ -15,9 +15,12 @@
 }
 
 .title {
-  font-family:'Times New Roman', Times, serif !important;
+  font-family: Hauora, monospace !important;
   color: var(--mantine-color-white);
   line-height: 1;
+  @media (max-width: 720px) {
+    font-size: 2rem !important;
+  }
 }
 
 .description {
@@ -25,6 +28,9 @@
   font-family: "Tenor Sans", sans-serif;
   font-size: 1.2rem !important;
   max-width: rem(300px);
+  @media (max-width: 720px) {
+    font-size: 1rem !important;
+  }
 
   @media (max-width: 576px) {
     max-width: 100%;
@@ -37,6 +43,9 @@
   border-radius: var(--mantine-radius-md);
   box-shadow: var(--mantine-shadow-lg);
   font-family: "Tenor Sans", sans-serif;
+  @media (max-width:720px){
+    font-size: 0.9rem !important;
+  }
 }
 
 .social {
@@ -56,16 +65,27 @@
     color: var(--mantine-color-gray-5);
     font-family: "Tenor Sans", sans-serif ;
     font-size: 1.1rem;
+    @media (max-width: 720px) {
+     font-size: 1rem;
+    }
   }
 }
 
 .inputLabel {
   color: #fff;
   font-size: 1.1rem !important;
+  @media (max-width: 720px) {
+    font-size: 1rem;
+  }
+  
 }
+
 
 .control {
   background-color: var(--mantine-color-blue-6);
   font-size: 1.1rem !important;
   font-family: "Tenor Sans", sans-serif;
+  @media (max-width: 720px) {
+    font-size: 1rem;
+  }
 }
