@@ -82,19 +82,18 @@ const V1 = styled.img`
   left: 0;
   right: 0;
   bottom: 0;
-  width: 95%;
-  height: 95vh;
+  width: 100%;
+  height: 100vh;
   margin: auto;
   object-fit: cover;
   object-position: bottom;
   z-index: 2;
-  transform: rotate(-4deg);
+  /* transform: rotate(-4deg); */
 `;
 
 const V2 = styled.img`
   position: absolute;
   top: -40%;
-
   left: -60%;
   width: 60%;
   height: 80vh;
@@ -107,7 +106,7 @@ object-fit: contain;
 `;
 
 const TitleContainer = styled.div`
-  width: 35%;
+  width: 45%;
   height: 100%;
   padding: 0.3rem;
   gap: 3rem;
@@ -137,7 +136,7 @@ z-index: 999;
 `;
 
 const Title = styled.h1`
-  font-size: 2.9rem;
+  font-size: 3.6rem;
   font-family: Hauora, monospace;
   z-index: 5;
   text-shadow: 1px 1px 0px #333,
@@ -180,7 +179,7 @@ const SubTitle = styled.p`
               
    
   z-index: 999;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   color: #989898;
   font-weight: 500;
   font-family: Hauora, monospace !important;
@@ -342,7 +341,7 @@ const CameraSection = () => {
       <TitleContainer ref={titleRef}>
         <Title>Give Some Life To Your Social Experience</Title>
         <SubTitle>
-          <span>
+          <span style={{  filter:" drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.2))"}}>
           Explore TagSocial's exciting features and dive into a world of possibilities
           </span>
         <Button>Checkout</Button>
