@@ -144,7 +144,7 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: calc(3.3em + 1vw); /* Adjust the font size based on viewport width */
+  font-size: calc(3.1em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 101;
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #333,
@@ -162,10 +162,10 @@ const Title = styled.h1`
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
 
   @media screen and (max-width: 1120px) {
-    font-size: calc(2.6em + 1vw); /* Adjust font size for smaller screens */
+    font-size: calc(2.4em + 1vw); /* Adjust font size for smaller screens */
   }
   @media screen and (max-width: 625px) {
-    font-size: calc(2.2em + 1vw); /* Adjust font size for even smaller screens */
+    font-size: calc(2em + 1vw); /* Adjust font size for even smaller screens */
   }
 `;
 const Text = styled.p`
@@ -246,7 +246,7 @@ const MarqueeH1 = styled.h1`
                 4px 4px 0px #333 !important;
 font-family: Hauora, monospace;
 color: #fff;
-font-size: 4.3rem;
+font-size: 4.2rem;
 background-color: #383838;
 
 @media only screen and (max-width: 700px) {

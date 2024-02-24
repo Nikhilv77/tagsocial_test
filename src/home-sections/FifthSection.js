@@ -115,7 +115,7 @@ const FifthSection = () => {
         trigger: Elem,
         start: '5% top',
         end: `bottom top`,
-        scrub: 3,
+        scrub: 2,
         pin: true,
         pinSpacing: true,
       },
@@ -126,7 +126,7 @@ const FifthSection = () => {
         trigger: Elem,
         start: '5% top',
         end: `bottom top`,
-        scrub: 1,
+        scrub: 2,
       },
     })
     .to(Text1Elem, { top: "-45%", scale: 1}) 

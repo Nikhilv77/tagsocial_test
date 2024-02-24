@@ -263,7 +263,7 @@ const CameraSection = () => {
         trigger: Elem,
         start: "top top",
         end: `bottom+=500 bottom`,
-        scrub: 1,
+        scrub: 2,
         pin: true,
         pinSpacing: true,
       },
@@ -275,7 +275,7 @@ const CameraSection = () => {
           trigger: Elem,
           start: "top top",
           end: `bottom+=500 bottom`,
-          scrub: 1,
+          scrub: 2,
         },
       })
       .to(video1Elem, { scale: 0.3,rotation:-15,left:"-10%",opacity:0 }, "key1")
