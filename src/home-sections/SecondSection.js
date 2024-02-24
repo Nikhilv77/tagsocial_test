@@ -206,7 +206,7 @@ const Button = styled.button`
   padding: 0.8rem 2rem 0.8rem 2rem;
   font-size: 1.7rem;
   border: none;
-  background-color: #007fff;
+  background:linear-gradient(135deg, rgba(0, 126, 242, 1), rgba(0, 58, 108, 1)) !important;
   color: #fff;
   border-radius: 0.3rem;
   position: relative;
