@@ -10,7 +10,7 @@ import thirdSectionImg2 from '../assets/Images/thirdsection-2.png'
 import Marquee from "react-fast-marquee";
 const Section = styled.section`
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   z-index: 1;
   background-color: #181818;
@@ -82,8 +82,8 @@ opacity: 0.5;
 const V1 = styled.img`
   position: absolute;
   top: -80%; /* initial position */
-  width: 60%;
-  height: 79vh;
+  width: 70%;
+  height: 86vh;
   object-fit: contain;
   object-position: bottom;
   z-index: 1;
@@ -94,8 +94,8 @@ const V1 = styled.img`
 const V2 = styled.img`
   position: absolute;
   right: -50%;
-  width: 60%;
-  height: 79vh;
+  width: 70%;
+  height: 86vh;
   object-fit: contain;
   object-position: bottom;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
@@ -139,19 +139,24 @@ const TextContainer = styled.div`
 
   @media screen and (max-width: 1120px) {
     top: 30%;
-    
+ 
   }
   @media screen and (max-height:600px){
     top: 20%;
+
+  }
+   @media screen and (max-width:400px){
+    top: 17%;
+    width: 50%;
   }
  
 `;
 
 const Title = styled.h1`
-  font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
+  font-size: calc(3.3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
   text-transform: capitalize;
-  /* text-shadow: 1px 1px 0px #333,
+  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -160,21 +165,21 @@ const Title = styled.h1`
                  3px 3px 0px #333,
                  4px 4px 0px #333,
                  4px 4px 0px #333,
-                5px 5px 0px #333; */
+                5px 5px 0px #333;
   color: #fff;
   font-family: Hauora, monospace !important;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
 
   @media screen and (max-width: 1120px) {
-    font-size: calc(2.4em + 1vw); /* Adjust font size for smaller screens */
+    font-size: calc(2.6em + 1vw); /* Adjust font size for smaller screens */
   }
   @media screen and (max-width: 625px) {
-    font-size: calc(1.9em + 1vw); /* Adjust font size for even smaller screens */
+    font-size: calc(2.2em + 1vw); /* Adjust font size for even smaller screens */
   }
 `;
 const Text = styled.p`
  font-family: Hauora, monospace !important;
-font-size: calc(1em + 1vw);
+font-size: calc(1.2em + 1vw);
 line-height: 1.8;
   z-index: 5;
   text-transform: capitalize;
@@ -182,7 +187,7 @@ line-height: 1.8;
  
   color: #B0B0B0;
   font-family: 'Times Roman';
-  /* text-shadow: 1px 1px 0px #333,
+  text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -191,14 +196,14 @@ line-height: 1.8;
                  2px 2px 0px #333,
                  2px 2px 0px #333,
                  1px 1px 0px #333,
-                2px 2px 0px #333; */
+                2px 2px 0px #333;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
               
   @media screen and (max-width: 1120px) {
-    font-size: calc(0.8em + 1vw);
+    font-size: calc(1.2em + 1vw);
   }
   @media screen and (max-width: 625px) {
-    font-size: calc(0.6em + 1vw);
+    font-size: calc(1em + 1vw);
   }
 `;
 
@@ -207,16 +212,16 @@ const Button = styled.button`
   font-family: Hauora, monospace;
   font-weight: 600;
   padding: 0.8rem 2rem 0.8rem 2rem;
-  font-size: calc(0.4em + 1vw);
+  font-size: calc(0.7em + 1vw);
   border: none;
-  background-color: #007fff;
+  background:linear-gradient(135deg, rgba(0, 126, 242, 1), rgba(0, 58, 108, 1));
   color: #fff;
   border-radius: 0.3rem;
   position: relative;
   overflow: hidden;
   transition: color 0.3s ease;
   align-self: flex-start;
-
+ z-index: 99;
 
 
   &:hover {
@@ -228,11 +233,11 @@ const Button = styled.button`
   }
 
   @media screen and (max-width: 1120px) {
-    font-size: calc(0.8em + 1vw);
+    font-size: calc(0.9em + 1vw);
   }
 
   @media screen and (max-width: 625px) {
-    font-size: calc(0.4em + 1vw);
+    font-size: calc(0.7em + 1vw);
     padding: 0.8rem 2rem 0.8rem 2rem;
   }
 `;
@@ -382,7 +387,7 @@ const ThirdSection = () => {
 </Title>
       </TitleContainer>
       <TextContainer ref={textRef}>
-      <Text>Embark on a journey of discovery. Connect with like-minded individuals and begin building meaningful relationships. Get started now!</Text>
+      <Text>Connect with like-minded individuals and begin building meaningful relationships. Get started now!</Text>
       <Button>GET STARTED</Button>
       </TextContainer>
       <V1 ref={videoRef1} src={thirdSectionImg1}  />

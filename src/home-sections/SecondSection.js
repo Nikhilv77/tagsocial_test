@@ -229,15 +229,15 @@ const Button = styled.button`
 
   @media screen and (max-width: 768px) {
   
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 
 }
 @media screen and (max-width: 640px) {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 
 }
 @media screen and (max-width: 480px) {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 `;
 
