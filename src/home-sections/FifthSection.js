@@ -7,7 +7,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 import sunFrameImage from '../assets/Images/sun-frame.png'
 const Section = styled.section`
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -52,7 +52,7 @@ const Title = styled.h1`
   border-radius: 1rem;
   text-transform: 0 0 4px #fff;
   color: #fff;
-  font-family: "Tenor Sans", sans-serif;
+  font-family: Hauora, monospace;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
 
   @media screen and (max-width: 70em) {
@@ -63,7 +63,7 @@ const Title = styled.h1`
   }
 `
 const Cta = styled.h1`
-  font-size: 2.7em;
+  font-size: 3.3em;
   z-index: 6;
   text-transform: capitalize;
  opacity: 1;
@@ -72,12 +72,22 @@ const Cta = styled.h1`
   color: #fff;
   font-family: Hauora, monospace;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5));
+  text-shadow: 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 1px 1px 0px #333,
+                 2px 2px 0px #333,
+                 3px 3px 0px #333,
+                 3px 3px 0px #333,
+                 4px 4px 0px #333,
+                 4px 4px 0px #333,
+                5px 5px 0px #333;
 
   @media screen and (max-width: 70em) {
-    font-size: 2.1em;
+    font-size: 2.7em;
   }
   @media screen and (max-width: 48em) {
-    font-size: 1.7em;
+    font-size: 2.2em;
   }
 `
 
@@ -122,7 +132,7 @@ const FifthSection = () => {
     .to(Text1Elem, { top: "-45%", scale: 1}) 
     .to(imageElem,{scale : 0.3, rotation: 15,bottom:'5%'},"key1")
     .to(frameElem,{bottom:"4%",scale:1,rotation:-20},"key1")
-    .to(ctaElem,{top:'50%', right:'30%',scale:1,rotation:15})
+    .to(ctaElem,{top:'50%', right:'20%',scale:1,rotation:15})
     
   
     
