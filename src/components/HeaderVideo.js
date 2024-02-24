@@ -132,8 +132,8 @@ const HeaderVideo = () => {
     height: "20rem", 
   }}
   transition={{
-    delay: 2.5,
-    duration: 0.9,
+    delay: 2,
+    duration: 1.3,
   }}
 >
        <motion.div
@@ -156,14 +156,14 @@ const HeaderVideo = () => {
       }}
       animate={{
         opacity: 1,
-        height:'5rem' 
+        height:'6rem' 
       }}
       transition={{
         delay: 3.5,
-        duration: 0.9,
+        duration: 1.2,
       }}
      >
-      <Marquee  speed={250}>
+      <Marquee   speed={190}>
      <MarqueeH1 whileHover={{ textShadow: "0 0 20px rgba(255, 255, 255, 0.8)" }}>
   Discover. Connect. Share
 </MarqueeH1>
