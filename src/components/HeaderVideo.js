@@ -27,7 +27,7 @@ transition: all 1s ease;
     text-align: center;
     line-height:1.3;
     text-shadow: 1px 1px 1px ${props=>props.theme.body};
-    font-size: 3.2em;
+    font-size: 3.5em;
     /* text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -42,16 +42,16 @@ transition: all 1s ease;
 
     user-select: none;
  @media (max-width:800px){
-  font-size: 2.7em;
+  font-size: 2.8em;
  }
  @media (max-width:600px){
-  font-size: 2.5em;
+  font-size: 2.6em;
  }
  @media (max-width:500px){
-  font-size: 2.3em;
+  font-size: 2.4em;
  }
  @media (max-width:400px){
-  font-size: 2.1em;
+  font-size: 2.2em;
  }
   }
 
