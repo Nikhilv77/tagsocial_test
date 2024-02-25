@@ -1,25 +1,26 @@
-import React from "react";
-import {FAQFeaturesPrivacyNav} from '../components/Faq,Features,PrivacyNavbar'
-import Footer from "../home-sections/FooterSection";
-import FirstSection from "../features-sections/FirstSection";
-import SecondSection from "../features-sections/SecondSection";
-import HeroSection from "../features-sections/HeroSection";
-import ThirdSection from "../features-sections/ThirdSection";
-import FourthSection from "../features-sections/FourthSection";
-import FifthSection from "../features-sections/FifthSection";
-
+import React from 'react'
+import SecondNavbar from '../components/second-navbar/SecondNavbar'
+import HeroSection from '../features-sections/HeroSection'
+import FirstSection from '../features-sections/FirstSection'
+import SecondSection from '../features-sections/SecondSection'
+import ThirdSection from '../features-sections/ThirdSection'
+import FourthSection from '../features-sections/FourthSection'
+import FifthSection from '../features-sections/FifthSection'
+import Footer from '../home-sections/FooterSection'
 
 const FeaturesPage = () => {
-  return <div  style={{backgroundColor:'#181818'}}>
-    <FAQFeaturesPrivacyNav/>
-    <HeroSection/>
-    <FirstSection/>
-    <SecondSection/>
-    <ThirdSection/>
-    <FourthSection/>
-    <FifthSection/>
-    <Footer/>
-  </div>;
-};
+  return (
+    <div style={{ backgroundColor: '#181818' }}>
+      <SecondNavbar />
+      <HeroSection />
+      <FirstSection />
+      <SecondSection />
+      <ThirdSection />
+      <FourthSection />
+      <FifthSection />
+      <Footer />
+    </div>
+  )
+}
 
-export default FeaturesPage;
+export default FeaturesPage

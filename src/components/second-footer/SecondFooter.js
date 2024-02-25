@@ -1,12 +1,9 @@
 import { motion } from 'framer-motion'
 import React from 'react'
 import styled from 'styled-components'
-import { useEffect } from 'react'
-
-import Logo from '../assets/images/homepage-images/Logo.png'
 
 const Section = styled.section`
-  min-height: 100vh;
+  min-height: 20vh;
   width: 100%;
 
   display: flex;
@@ -17,23 +14,6 @@ const Section = styled.section`
 
   background-color: #181818;
   color: white;
-
-  position: relative;
-`
-
-const LogoContainer = styled.div`
-  display: flex;
-
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    width: 6rem;
-    height: 6rem;
-    filter: brightness(0) invert(1) grayscale(1);
-    user-select: none;
-  }
 `
 
 const FooterComponent = styled(motion.footer)`
@@ -48,7 +28,6 @@ const FooterComponent = styled(motion.footer)`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 2rem;
     margin-top: 4rem;
     padding: 0 1rem;
     border-top: 1px solid ${(props) => props.theme.text};
@@ -61,15 +40,12 @@ const FooterComponent = styled(motion.footer)`
 
   li {
     padding: 2rem;
-    font-size: ${(props) => props.theme.fontlg};
-    text-transform: capitalize;
-    font-family: Hauora, monospace;
+    font-size: 1.2rem;
     font-weight: 520 !important;
+    text-transform: capitalize;
+    font-family: Hauora, monospace !important;
     cursor: pointer;
     transition: all 0.3s ease;
-    &:hover {
-      transform: scale(1.1);
-    }
 
     @media (max-width: 48em) {
       padding: 1rem;
@@ -80,14 +56,15 @@ const FooterComponent = styled(motion.footer)`
 
 const Bottom = styled.div`
   padding: 0.5rem 0;
-  margin: 0 4rem;
+
   font-size: ${(props) => props.theme.fontlg};
-  font-family: Hauora, monospace;
+  font-family: Hauora, monospace !important;
   font-weight: 520 !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
+  width: 100%;
+  margin: auto;
 
   a {
     text-decoration: underline;
@@ -107,56 +84,15 @@ const Bottom = styled.div`
   }
 `
 
-const FooterSection = () => {
-  useEffect(() => {
-    ;(async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default
-      const locomotiveScroll = new LocomotiveScroll()
-    })()
-  }, [])
-  const handleScroll = (id) => {
-    let elem = document.querySelector(id)
-    if (elem) {
-      window.scrollTo({
-        top: elem.offsetTop - 100,
-        behavior: 'smooth',
-      })
-    }
-  }
-
+const SecondFooter = () => {
   return (
     <Section>
-      <LogoContainer>
-        <img
-          width="300"
-          height="300"
-          src={Logo}
-          alt="tagsocial"
-          // data-scroll
-          // data-scroll-speed="2"
-        />
-      </LogoContainer>
-      <FooterComponent
-        initial={{ y: '-400px' }}
-        whileInView={{ y: 0 }}
-        viewport={{ once: false }}
-        transition={{
-          duration: 1.5,
-        }}
-      >
+      <FooterComponent>
         <ul>
-          <li aria-hidden="true" onClick={() => handleScroll('#home')}>
-            Home
-          </li>
-          <li aria-hidden="true" onClick={() => handleScroll('.about')}>
-            Features
-          </li>
-          <li aria-hidden="true" onClick={() => handleScroll('#shop')}>
-            FAQs
-          </li>
-          <li aria-hidden="true" onClick={() => handleScroll('.new-arrival')}>
-            Privacy Policy
-          </li>
+          <li>Home</li>
+          <li>Features</li>
+          <li>FAQs</li>
+          <li>Privacy Policy</li>
         </ul>
         <Bottom>
           <span
@@ -211,25 +147,12 @@ const FooterSection = () => {
               </svg>
             </div>
           </span>
-          <span
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            Made In India
-          </span>
 
-          <span>
-            TagSocial&copy; 2021.
-            <br />
-            All Rights Reserved.
-          </span>
+          <span>TagSocial&copy; 2021. All Rights Reserved.</span>
         </Bottom>
       </FooterComponent>
     </Section>
   )
 }
 
-export default FooterSection
+export default SecondFooter
