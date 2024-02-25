@@ -237,7 +237,7 @@ const FirstSection = () => {
         trigger: Elem,
         start: 'top top',
         end: `bottom+=500 bottom`,
-        scrub: 18,
+        scrub: 1,
         pin: true,
         pinSpacing: true,
       },
@@ -249,7 +249,7 @@ const FirstSection = () => {
           trigger: Elem,
           start: 'top top',
           end: `bottom+=500 bottom`,
-          scrub: 18,
+          scrub: 1,
         },
       })
       .to(
