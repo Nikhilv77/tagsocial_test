@@ -264,8 +264,8 @@ const HeroSection = () => {
         </TextContainer>
         <I1 src={image1} />
         <I2 src={image2} />
-        <I3 src={image3} />
-        <I4 src={image4} />
+        <I3 src={image4} />
+        <I4 src={image3} />
       </Section>
 
       <div
