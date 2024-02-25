@@ -85,14 +85,14 @@ const V1 = styled.img`
   width: 40%; /* Set initial width as a percentage of viewport width */
   max-width: 100%; /* Ensure the image doesn't exceed its container's width */
   
-  height: 85vh;
+  height: 90vh;
   object-fit: contain;
   object-position: bottom;
   z-index: 1;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
   @media screen and (max-width:500px){
-    height: 79vh;
-    width: 80%;
+    height: 85vh;
+    width: 85%;
   }
 `;
 
@@ -160,7 +160,7 @@ line-height: 1.8;
   text-transform: 0 0 4px #fff;
  
   color: 	#A8A8A8;
-  font-family: 'Times Roman';
+  font-family:Hauora, monospace;
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -245,7 +245,7 @@ const FourthSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { right: 0, top:0, scale: 1},"key1")
+      .to(video1Elem, { right: "-7%", top:0, scale: 1},"key1")
       ;
 
       subElements("h1").forEach((el) =>
