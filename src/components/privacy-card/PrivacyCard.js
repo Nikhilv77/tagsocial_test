@@ -178,7 +178,7 @@ const MotionSubTitle = styled(motion.h2)`
   font-size: 1.6rem; /* Increase font size */
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  font-family: "Tenor Sans", sans-serif;
+  font-family: Hauora, monospace !important;
   
   @media screen and (max-width:700px){
      font-size: 1.5rem;
@@ -192,7 +192,7 @@ const MotionSubTitle = styled(motion.h2)`
 `;
 
 const MotionContent = styled(motion.div)`
-font-family: "Tenor Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
 `;
 
 const MotionSection = styled.div`

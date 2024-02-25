@@ -2,7 +2,7 @@
   min-height: rem(400px);
   width: 80vw;
   margin: auto;
-  background: linear-gradient(to right, rgba(0,126,242,1), rgb(3, 86, 159));
+  background: linear-gradient(to right, rgba(0, 126, 242, 1), rgb(3, 86, 159));
   border-radius: var(--mantine-radius-md);
   padding: calc(var(--mantine-spacing-xl) * 2.5);
 
@@ -15,7 +15,7 @@
 }
 
 .title {
-  font-family: Hauora, monospace !important;
+  font-family: 'Open Sans', sans-serif !important;
   color: var(--mantine-color-white);
   line-height: 1;
   @media (max-width: 720px) {
@@ -25,7 +25,7 @@
 
 .description {
   color: white !important;
-  font-family: "Tenor Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   font-size: 1.2rem !important;
   max-width: rem(300px);
   @media (max-width: 720px) {
@@ -42,8 +42,8 @@
   padding: var(--mantine-spacing-xl);
   border-radius: var(--mantine-radius-md);
   box-shadow: var(--mantine-shadow-lg);
-  font-family: "Tenor Sans", sans-serif;
-  @media (max-width:720px){
+  font-family: 'Open Sans', sans-serif !important;
+  @media (max-width: 720px) {
     font-size: 0.9rem !important;
   }
 }
@@ -63,10 +63,10 @@
 
   &::placeholder {
     color: var(--mantine-color-gray-5);
-    font-family: "Tenor Sans", sans-serif ;
+    font-family: 'Open Sans', sans-serif !important;
     font-size: 1.1rem;
     @media (max-width: 720px) {
-     font-size: 1rem;
+      font-size: 1rem;
     }
   }
 }
@@ -77,14 +77,12 @@
   @media (max-width: 720px) {
     font-size: 1rem;
   }
-  
 }
-
 
 .control {
   background-color: var(--mantine-color-blue-6);
   font-size: 1.1rem !important;
-  font-family: "Tenor Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   @media (max-width: 720px) {
     font-size: 1rem;
   }

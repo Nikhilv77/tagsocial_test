@@ -13,12 +13,12 @@ const FaqWrapper = styled(motion(Container))`
   padding-top: calc(var(--mantine-spacing-xl) * 4);
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
   min-height: 650px;
-  font-family: 'Tenor Sans', sans-serif;
+  font-family: Hauora, monospace !important;
 `;
 
 const FaqTitle = styled(motion(Title))`
   margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
-  font-family: 'Hauora', monospace;
+  font-family: Hauora, monospace !important;
   color: #fff;
   font-size: 2.3rem;
   @media (max-width: 720px) {
@@ -36,7 +36,7 @@ const FaqAccordionItem = styled(motion(Accordion.Item))`
   border-radius: 8px;
   margin-bottom: 20px;
   border: 1px solid rgba(0, 0, 0, 0.12);
-
+  font-family: "Open Sans", sans-serif !important;
   @media (max-width: 720px) {
     font-size: 1rem !important;
   }
@@ -45,7 +45,7 @@ const FaqAccordionItem = styled(motion(Accordion.Item))`
 const FaqAccordionControl = styled(motion(Accordion.Control))`
   color: #fff;
   font-size: 1.2rem;
-
+  font-family: "Open Sans", sans-serif !important;
   @media (max-width: 720px) {
     font-size: 1.1rem !important;
   }
