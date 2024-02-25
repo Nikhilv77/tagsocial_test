@@ -174,7 +174,7 @@ const Title = styled.h1`
                  4px 4px 0px #333,
                 5px 5px 0px #333; */
   color: #fff;
-  font-family: Hauora, monospace;
+  font-family: Hauora, monospace !important;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
 
   @media screen and (max-width: 1120px) {

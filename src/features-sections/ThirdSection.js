@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React from "react";
 import { useLayoutEffect } from "react";
 import { useRef } from "react";
-import styled,{keyframes} from "styled-components";
+import styled from "styled-components";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import thirdSectionImg1 from '../assets/images/featurespage-images/section-3-1.png'
 import thirdSectionImg2 from '../assets/images/featurespage-images/section-3-2.png'
@@ -135,7 +135,7 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   font-size: calc(3em + 1vw); /* Adjust the font size based on viewport width */
   z-index: 5;
-  font-family: Hauora, monospace;
+  font-family: Hauora, monospace !important;
   text-transform: capitalize;
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -160,7 +160,7 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
 /* text-align: justify; */
-font-family: Hauora, monospace;
+font-family: Hauora, monospace !important;
 font-size: calc(1em + 1vw);
 line-height: 1.8;
   z-index: 5;

@@ -139,7 +139,7 @@ const Title = styled.h1`
                  4px 4px 0px #333,
                 5px 5px 0px #333;
   color: #fff;
-  font-family: Hauora, monospace;
+  font-family: Hauora, monospace !important;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.1));
 
   @media screen and (max-width: 1120px) {
@@ -160,7 +160,7 @@ line-height: 1.8;
   text-transform: 0 0 4px #fff;
  
   color: 	#A8A8A8;
-  font-family:Hauora, monospace;
+  font-family: Hauora, monospace !important;
   text-shadow: 1px 1px 0px #333,
                  1px 1px 0px #333,
                  1px 1px 0px #333,
@@ -193,7 +193,7 @@ const MarqueeH1 = styled.h1`
                  3px 3px 0px #333,
                  3px 3px 0px #333,
                 4px 4px 0px #333 !important;
-font-family: Hauora, monospace;
+font-family: Hauora, monospace !important;
 color: #fff;
 font-size: 3.5rem;
 background-color: #383838;
