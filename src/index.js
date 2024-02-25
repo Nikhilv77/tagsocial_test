@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom';
 import App from './App';
-
 
 import '@mantine/core/styles.css';
 
-ReactDOM.render(
+// Create a root for rendering
+const root = createRoot(document.getElementById('root'));
+
+// Render the app inside the root
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
-

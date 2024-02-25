@@ -1,11 +1,8 @@
 import { ThemeProvider } from 'styled-components'
 import GlobalStyles from './styles/GlobalStyles'
 import { system } from './styles/Themes'
-
-import { useState, useEffect, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import './font.css'
-import Loader from './components/Loader'
 import FaqsPage from './pages/FaqsPage'
 import PrivacyPage from './pages/PrivacyPolicyPage'
 import HomePage from './pages/HomePage'
@@ -15,19 +12,11 @@ import FeaturesPage from './pages/FeaturesPage'
 
 
 function App() {
-  const [Loaded, setLoaded] = useState(false)
   
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true)
-    }, 1000)
-  }, [])
   return (
     <div>
       <GlobalStyles />
       <ThemeProvider theme={system}>
-        {/* <AnimatePresence>{Loaded ? null : <Loader />}</AnimatePresence> */}
         <AnimatePresence>
           <BrowserRouter>
           <Routes>

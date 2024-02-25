@@ -5,10 +5,6 @@
 import React from "react";
 import styled from "styled-components";
 import HeaderVideo from "../components/HeaderVideo";
-import Logo from "../components/Logo";
-import Navbar from "../components/Navbar";
-import { useEffect } from "react";
-import {motion} from 'framer-motion'
 import {Header} from "./Nav";
 
 

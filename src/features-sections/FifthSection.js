@@ -6,7 +6,6 @@ import { useRef } from "react";
 import styled,{keyframes} from "styled-components";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import thirdSectionImg1 from '../assets/Images/features/section-5-3.png'
-import thirdSectionImg2 from '../assets/Images/features/section-4-2.png'
 import Marquee from "react-fast-marquee";
 const Section = styled.section`
   width: 100vw;
