@@ -1,10 +1,12 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import gsap from "gsap";
 import React from "react";
 import { useLayoutEffect } from "react";
 import { useRef } from "react";
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import thirdSectionImg1 from '../assets/images/featurespage-images/section-5-3.png'
+
 import Marquee from "react-fast-marquee";
 const Section = styled.section`
   width: 100vw;

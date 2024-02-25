@@ -1,9 +1,9 @@
-
+import gsap from "gsap";
 import React from "react";
 import styled from "styled-components";
 import i1 from '../assets/images/featurespage-images/hero-1.png'
 import i2 from '../assets/images/featurespage-images/hero-2.png'
-import i3 from '../assets/images/featurespage-images/hero-3.png'
+import i3 from '../assets/images/featurespage-images//hero-3.png'
 import i4 from '../assets/images/featurespage-images/hero-4.png'
 
 import Marquee from "react-fast-marquee";
