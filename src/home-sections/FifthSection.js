@@ -76,8 +76,8 @@ const Blur3 = styled.div`
 `
 const I1 = styled.img`
   position: absolute;
-  bottom: -50%;
-  right: -50%;
+  bottom: -100%;
+  right: -100%;
   width: 81%;
   height: 81vh;
   object-fit: contain;
@@ -272,6 +272,7 @@ const FifthSection = () => {
         right: '-3%',
         zIndex: 5,
         scale: 1,
+        transitionDuration:0.7
       })
 
     elements('h1').forEach((el) =>
@@ -291,7 +292,7 @@ const FifthSection = () => {
           x: 0,
           opacity: 1,
         },
-        'key2'
+        'key3'
       )
     )
     subElements('p').forEach((el) =>

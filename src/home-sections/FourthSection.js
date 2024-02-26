@@ -76,7 +76,7 @@ const Blur3 = styled.div`
 `
 const I1 = styled.img`
   position: absolute;
-  bottom: -70%;
+  bottom: -120%;
   left: 2%;
   width: 77%;
   height: 77vh;
@@ -236,6 +236,7 @@ const FourthSection = () => {
         left: '-2%',
         zIndex: 5,
         scale: 1,
+        transitionDuration:0.7
       })
 
     subElements('h1').forEach((el) =>
@@ -255,7 +256,8 @@ const FourthSection = () => {
         {
           x: 0,
           opacity: 1,
-        }
+        },
+        "key3"
       )
     )
     subElements('p').forEach((el) =>
@@ -275,7 +277,7 @@ const FourthSection = () => {
           x: 0,
           opacity: 1,
         },
-        'key2'
+        "key3"
       )
     )
     subElements('button').forEach((el) =>

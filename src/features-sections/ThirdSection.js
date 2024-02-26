@@ -253,8 +253,8 @@ const ThirdSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { left: "-20%", top:0, scale: 1},"key1")
-      .to(video2Elem, { right: "-20%", top:0, scale: 1},"key1")
+      .to(video1Elem, { left: "-20%", top:0, scale: 1,transitionDuration:0.1},"key1")
+      .to(video2Elem, { right: "-20%", top:0, scale: 1,transitionDuration:0.1},"key1")
       ;
 
       subElements("h1").forEach((el) =>

@@ -87,18 +87,18 @@ const I1 = styled.img`
   margin: auto;
   object-fit: cover;
   object-position: bottom;
-  z-index: 2;
+  z-index: 1;
   /* transform: rotate(-4deg); */
 `
 
 const I2 = styled.img`
   position: absolute;
-  top: -40%;
-  left: -60%;
+  top: -100%;
+  left: -100%;
   width: 60%;
   height: 80vh;
   object-fit: contain;
-  z-index: 1;
+  z-index: 2;
   @media screen and (max-width: 30em) {
     height: 70vh;
     top: 10%;
@@ -254,16 +254,16 @@ const FirstSection = () => {
       })
       .to(
         ImageElem1,
-        { scale: 0.3, rotation: -15, left: '-10%', opacity: 0,transitionDuration:1 },
+        { scale: 0.3, rotation: -15, left: '-10%',transitionDuration:0.1,delay:0 },
         'key1'
       )
       .to(
         ImageElem2,
-        { scale: 1, rotation: 15, left: '20%', top: '5%',transitionDuration:1 },
+        { scale: 1, rotation: 15, left: '20%', top: '5%',transitionDuration:0.7,delay:0 },
         'key1'
       )
 
-    elements('h1,p,button').forEach((el) =>
+    elements('h1').forEach((el) =>
       t2.fromTo(
         el,
         {
@@ -280,10 +280,54 @@ const FirstSection = () => {
         {
           x: 0,
           opacity: 1,
-        }
+        },
+        "key2"
+      )
+    )
+    
+    elements('p').forEach((el) =>
+      t2.fromTo(
+        el,
+        {
+          scrollTrigger: {
+            trigger: el,
+            start: 'top top',
+            end: `bottom bottom`,
+            scrub: 1,
+            // markers: true,
+          },
+          x: 100,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+        },
+        "key2"
       )
     )
 
+    elements('button').forEach((el) =>
+      t2.fromTo(
+        el,
+        {
+          scrollTrigger: {
+            trigger: el,
+            start: 'top top',
+            end: `bottom bottom`,
+            scrub: 1,
+            // markers: true,
+          },
+          x: 100,
+          opacity: 0,
+        },
+        {
+          x: 0,
+          opacity: 1,
+        },
+        "key2"
+      )
+    )
     return () => {
       if (t2) t2.kill()
     }

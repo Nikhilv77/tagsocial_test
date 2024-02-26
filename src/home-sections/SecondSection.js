@@ -81,7 +81,7 @@ const Blur3 = styled.div`
 `
 const I1 = styled.img`
   position: absolute;
-  top: -80%; /* initial position */
+  top: -150%; /* initial position */
   width: 70%;
   height: 86vh;
   object-fit: contain;
@@ -92,7 +92,7 @@ const I1 = styled.img`
 
 const I2 = styled.img`
   position: absolute;
-  right: -50%;
+  right: -100%;
   width: 70%;
   height: 86vh;
   object-fit: contain;
@@ -281,8 +281,8 @@ const SecondSection = () => {
           scrub: 1,
         },
       })
-      .to(ImageElem1, { top: '8%', right: '10%', scale: 1 }, 'key1')
-      .to(ImageElem2, { top: '8%', right: '-5%', scale: 1 }, 'key1')
+      .to(ImageElem1, { top: '8%', right: '10%', scale: 1,transitionDuration:0.6 }, 'key1')
+      .to(ImageElem2, { top: '8%', right: '-5%', scale: 1,transitionDuration:0.6  }, 'key1')
     elements('h1').forEach((el) =>
       t2.fromTo(
         el,
@@ -300,7 +300,7 @@ const SecondSection = () => {
           x: 0,
           opacity: 1,
         },
-        'key2'
+        'key3'
       )
     )
     subElements('p').forEach((el) =>

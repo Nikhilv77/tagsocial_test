@@ -239,7 +239,7 @@ const FifthSection = () => {
           scrub: 1,
         },
       })
-      .to(video1Elem, { left: "-10%", top:"4%", scale: 1.2},"key1")
+      .to(video1Elem, { left: "-10%", top:"4%", scale: 1.2,transitionDuration:0.1},"key1")
       ;
 
       subElements("h1").forEach((el) =>

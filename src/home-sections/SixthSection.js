@@ -120,10 +120,10 @@ const SixthSection = () => {
           scrub: 1,
         },
       })
-      .to(Text1Elem, { top: '-45%', scale: 1 })
-      .to(imageElem, { scale: 0.3, rotation: 15, bottom: '5%' }, 'key1')
-      .to(frameElem, { bottom: '4%', scale: 1, rotation: -20 }, 'key1')
-      .to(ctaElem, { top: '50%', right: '20%', scale: 1, rotation: 15 })
+      .to(Text1Elem, { top: '-45%', scale: 1,transitionDuration:0.3 })
+      .to(imageElem, { scale: 0.3, rotation: 15, bottom: '5%',transitionDuration:0.1 }, 'key1')
+      .to(frameElem, { bottom: '4%', scale: 1, rotation: -20,transitionDuration:0.6 }, 'key1')
+      .to(ctaElem, { top: '50%', right: '20%', scale: 1, rotation: 15,transitionDuration:0.2 })
 
     return () => {
       if (t1) t1.kill()
