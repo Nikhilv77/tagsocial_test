@@ -10,7 +10,7 @@ import Image2 from '../assets/images/homepage-images/thirdsection-2.png'
 import Marquee from 'react-fast-marquee'
 const Section = styled.section`
   width: 100vw;
-  height: 100vh;
+ min-height: 100vh;
   position: relative;
   z-index: 1;
   background-color: #181818;
