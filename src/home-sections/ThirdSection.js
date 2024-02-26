@@ -76,8 +76,8 @@ const Blur3 = styled.div`
 `
 const I1 = styled.img`
   position: absolute;
-  bottom: -50%;
-  right: -50%;
+  bottom: -70%;
+  right: -70%;
   width: 75%;
   height: 75vh;
   object-fit: contain;
@@ -270,6 +270,7 @@ const ThirdSection = () => {
         zIndex: 5,
         rotation: -30,
         scale: 1.2,
+        transitionDuration:0.7
       })
 
     elements('h1').forEach((el) =>

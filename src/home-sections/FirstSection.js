@@ -254,12 +254,12 @@ const FirstSection = () => {
       })
       .to(
         ImageElem1,
-        { scale: 0.3, rotation: -15, left: '-10%', opacity: 0 },
+        { scale: 0.3, rotation: -15, left: '-10%', opacity: 0,transitionDuration:1 },
         'key1'
       )
       .to(
         ImageElem2,
-        { scale: 1, rotation: 15, left: '20%', top: '5%' },
+        { scale: 1, rotation: 15, left: '20%', top: '5%',transitionDuration:1 },
         'key1'
       )
 
